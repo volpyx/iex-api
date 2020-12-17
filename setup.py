@@ -37,7 +37,10 @@ dev_requirements = [
     "wheel>=0.34.2",
 ]
 
-requirements = []
+requirements = [
+    "dataclasses-json",
+    "requests",
+]
 
 extra_requirements = {
     "setup": setup_requirements,
