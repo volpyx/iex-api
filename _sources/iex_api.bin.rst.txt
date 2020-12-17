@@ -1,0 +1,22 @@
+iex\_api.bin package
+====================
+
+Submodules
+----------
+
+iex\_api.bin.my\_example module
+-------------------------------
+
+.. automodule:: iex_api.bin.my_example
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: iex_api.bin
+   :members:
+   :undoc-members:
+   :show-inheritance:
