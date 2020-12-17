@@ -1,0 +1,22 @@
+iex\_api.model package
+======================
+
+Submodules
+----------
+
+iex\_api.model.common module
+----------------------------
+
+.. automodule:: iex_api.model.common
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: iex_api.model
+   :members:
+   :undoc-members:
+   :show-inheritance:
