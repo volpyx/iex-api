@@ -6,20 +6,8 @@ Subpackages
 
 .. toctree::
 
-   iex_api.bin
+   iex_api.api
    iex_api.model
-
-Submodules
-----------
-
-iex\_api.example module
------------------------
-
-.. automodule:: iex_api.example
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 
 Module contents
 ---------------

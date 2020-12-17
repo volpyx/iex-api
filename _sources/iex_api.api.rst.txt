@@ -1,0 +1,37 @@
+iex\_api.api package
+====================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   iex_api.api.model
+
+Submodules
+----------
+
+iex\_api.api.api module
+-----------------------
+
+.. automodule:: iex_api.api.api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+iex\_api.api.util module
+------------------------
+
+.. automodule:: iex_api.api.util
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: iex_api.api
+   :members:
+   :undoc-members:
+   :show-inheritance:

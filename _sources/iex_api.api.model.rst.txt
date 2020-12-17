@@ -1,13 +1,13 @@
-iex\_api.bin package
-====================
+iex\_api.api.model package
+==========================
 
 Submodules
 ----------
 
-iex\_api.bin.my\_example module
+iex\_api.api.model.model module
 -------------------------------
 
-.. automodule:: iex_api.bin.my_example
+.. automodule:: iex_api.api.model.model
    :members:
    :undoc-members:
    :show-inheritance:
@@ -16,7 +16,7 @@ iex\_api.bin.my\_example module
 Module contents
 ---------------
 
-.. automodule:: iex_api.bin
+.. automodule:: iex_api.api.model
    :members:
    :undoc-members:
    :show-inheritance:

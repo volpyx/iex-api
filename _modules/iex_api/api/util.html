@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>iex_api.model.common &mdash; iex-api 0.0.0 documentation</title>
+  <title>iex_api.api.util &mdash; iex-api 0.0.0 documentation</title>
   
 
   
@@ -159,7 +159,7 @@
         
           <li><a href="../../iex_api.html">iex_api</a> &raquo;</li>
         
-      <li>iex_api.model.common</li>
+      <li>iex_api.api.util</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -174,22 +174,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <h1>Source code for iex_api.model.common</h1><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
-<span class="kn">import</span> <span class="nn">datetime</span>
+  <h1>Source code for iex_api.api.util</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">datetime</span>
 
-<span class="kn">from</span> <span class="nn">dataclasses_json</span> <span class="kn">import</span> <span class="n">dataclass_json</span><span class="p">,</span> <span class="n">LetterCase</span>
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;convert_date_to_string&quot;</span><span class="p">]</span>
 
 
-<div class="viewcode-block" id="IEXTimeSeriesObject"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.common.IEXTimeSeriesObject">[docs]</a><span class="nd">@dataclass_json</span><span class="p">(</span><span class="n">letter_case</span><span class="o">=</span><span class="n">LetterCase</span><span class="o">.</span><span class="n">CAMEL</span><span class="p">)</span>
-<span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="k">class</span> <span class="nc">IEXTimeSeriesObject</span><span class="p">:</span>
-    <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="n">source</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="n">key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="n">sub_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="n">date</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="n">updated</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span> <span class="o">=</span> <span class="kc">None</span></div>
+<div class="viewcode-block" id="convert_date_to_string"><a class="viewcode-back" href="../../../iex_api.api.html#iex_api.api.util.convert_date_to_string">[docs]</a><span class="k">def</span> <span class="nf">convert_date_to_string</span><span class="p">(</span><span class="n">date</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span></div>
 </pre></div>
 
            </div>

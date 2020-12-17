@@ -37,7 +37,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Contributing" href="contributing.html" />
-    <link rel="prev" title="iex_api.bin package" href="iex_api.bin.html" /> 
+    <link rel="prev" title="iex_api.api.model package" href="iex_api.api.model.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -97,12 +97,10 @@
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Package modules</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="iex_api.html">iex_api package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="iex_api.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="iex_api.bin.html">iex_api.bin package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iex_api.api.html">iex_api.api package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">iex_api.model package</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="iex_api.html#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="iex_api.html#module-iex_api.example">iex_api.example module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="iex_api.html#module-iex_api">Module contents</a></li>
 </ul>
 </li>
@@ -182,7 +180,7 @@
         <a href="contributing.html" class="btn btn-neutral float-right" title="Contributing" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="iex_api.bin.html" class="btn btn-neutral float-left" title="iex_api.bin package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="iex_api.api.model.html" class="btn btn-neutral float-left" title="iex_api.api.model package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -200,7 +198,7 @@
 <span id="iex-api-model-common-module"></span><h2>iex_api.model.common module<a class="headerlink" href="#module-iex_api.model.common" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="iex_api.model.common.IEXTimeSeriesObject">
-<em class="property">class </em><code class="sig-prename descclassname">iex_api.model.common.</code><code class="sig-name descname">IEXTimeSeriesObject</code><span class="sig-paren">(</span><em class="sig-param">id: str</em>, <em class="sig-param">source: str</em>, <em class="sig-param">key: str</em>, <em class="sig-param">sub_key: str</em>, <em class="sig-param">date: datetime.date</em>, <em class="sig-param">updated: datetime.date</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#IEXTimeSeriesObject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.IEXTimeSeriesObject" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">iex_api.model.common.</code><code class="sig-name descname">IEXTimeSeriesObject</code><span class="sig-paren">(</span><em class="sig-param">id: str = None</em>, <em class="sig-param">source: str = None</em>, <em class="sig-param">key: str = None</em>, <em class="sig-param">sub_key: str = None</em>, <em class="sig-param">date: datetime.date = None</em>, <em class="sig-param">updated: datetime.date = None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#IEXTimeSeriesObject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.IEXTimeSeriesObject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="attribute">
 <dt id="iex_api.model.common.IEXTimeSeriesObject.dataclass_json_config">
