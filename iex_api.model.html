@@ -194,12 +194,378 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
+<div class="section" id="module-iex_api.model.ca">
+<span id="iex-api-model-ca-module"></span><h2>iex_api.model.ca module<a class="headerlink" href="#module-iex_api.model.ca" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="iex_api.model.ca.AdvancedDividend">
+<em class="property">class </em><code class="sig-prename descclassname">iex_api.model.ca.</code><code class="sig-name descname">AdvancedDividend</code><span class="sig-paren">(</span><em class="sig-param">id: str, key: str, source: Optional[str], sub_key: Optional[str], date: Optional[datetime.date], updated: Optional[datetime.date], symbol: str, ex_date: datetime.date, record_date: datetime.date, payment_date: datetime.date, announce_date: datetime.date, currency: str, frequency: str, amount: float, description: str, flag: str, security_type: str, notes: str, figi: str, last_updated: datetime.date, country_code: str, par_value: str, par_valueCurrency: str, net_amount: float, gross_amount: float, marker: str, tax_rate: float, from_factor: float, to_factor: float, adr_fee: float, coupon: float, declared_currency_CD: str, declared_gross_amount: float, is_net_investment_income: bool, is_DAP: bool, is_approximate: bool, fx_date: datetime.date, second_payment_date: datetime.date, second_ex_date: datetime.date, fiscal_year_end_date: datetime.date, period_end_date: datetime.date, optional_election_date: datetime.date, to_date: datetime.date, registration_date: datetime.date, installment_pay_date: datetime.date, declared_date: datetime.date, refid: int, created: datetime.date</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/ca.html#AdvancedDividend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#iex_api.model.common.IEXTimeSeriesObject" title="iex_api.model.common.IEXTimeSeriesObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">iex_api.model.common.IEXTimeSeriesObject</span></code></a></p>
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.ID">
+<code class="sig-name descname">ID</code><em class="property"> = 'ADVANCED_DIVIDENDS'</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.ID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.adr_fee">
+<code class="sig-name descname">adr_fee</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.adr_fee" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.amount">
+<code class="sig-name descname">amount</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.amount" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.announce_date">
+<code class="sig-name descname">announce_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.announce_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.country_code">
+<code class="sig-name descname">country_code</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.country_code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.coupon">
+<code class="sig-name descname">coupon</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.coupon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.created">
+<code class="sig-name descname">created</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.created" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.currency">
+<code class="sig-name descname">currency</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.currency" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.dataclass_json_config">
+<code class="sig-name descname">dataclass_json_config</code><em class="property"> = {'letter_case': &lt;function camelcase&gt;}</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.dataclass_json_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.declared_currency_CD">
+<code class="sig-name descname">declared_currency_CD</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.declared_currency_CD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.declared_date">
+<code class="sig-name descname">declared_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.declared_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.declared_gross_amount">
+<code class="sig-name descname">declared_gross_amount</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.declared_gross_amount" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.description">
+<code class="sig-name descname">description</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.ex_date">
+<code class="sig-name descname">ex_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.ex_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.figi">
+<code class="sig-name descname">figi</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.figi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.fiscal_year_end_date">
+<code class="sig-name descname">fiscal_year_end_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.fiscal_year_end_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.flag">
+<code class="sig-name descname">flag</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.flag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.frequency">
+<code class="sig-name descname">frequency</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.frequency" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.ca.AdvancedDividend.from_dict">
+<em class="property">classmethod </em><code class="sig-name descname">from_dict</code><span class="sig-paren">(</span><em class="sig-param">kvs: Union[dict, list, str, int, float, bool, None], *, infer_missing=False</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.from_factor">
+<code class="sig-name descname">from_factor</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.from_factor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.ca.AdvancedDividend.from_json">
+<em class="property">classmethod </em><code class="sig-name descname">from_json</code><span class="sig-paren">(</span><em class="sig-param">s: Union[str, bytes, bytearray], *, parse_float=None, parse_int=None, parse_constant=None, infer_missing=False, **kw</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.from_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.fx_date">
+<code class="sig-name descname">fx_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.fx_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.gross_amount">
+<code class="sig-name descname">gross_amount</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.gross_amount" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.installment_pay_date">
+<code class="sig-name descname">installment_pay_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.installment_pay_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.is_DAP">
+<code class="sig-name descname">is_DAP</code><em class="property">: bool</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.is_DAP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.is_approximate">
+<code class="sig-name descname">is_approximate</code><em class="property">: bool</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.is_approximate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.is_net_investment_income">
+<code class="sig-name descname">is_net_investment_income</code><em class="property">: bool</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.is_net_investment_income" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.last_updated">
+<code class="sig-name descname">last_updated</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.last_updated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.marker">
+<code class="sig-name descname">marker</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.marker" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.net_amount">
+<code class="sig-name descname">net_amount</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.net_amount" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.notes">
+<code class="sig-name descname">notes</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.notes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.optional_election_date">
+<code class="sig-name descname">optional_election_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.optional_election_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.par_value">
+<code class="sig-name descname">par_value</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.par_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.par_valueCurrency">
+<code class="sig-name descname">par_valueCurrency</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.par_valueCurrency" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.payment_date">
+<code class="sig-name descname">payment_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.payment_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.period_end_date">
+<code class="sig-name descname">period_end_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.period_end_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.record_date">
+<code class="sig-name descname">record_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.record_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.refid">
+<code class="sig-name descname">refid</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.refid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.registration_date">
+<code class="sig-name descname">registration_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.registration_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.ca.AdvancedDividend.schema">
+<em class="property">classmethod </em><code class="sig-name descname">schema</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.schema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.second_ex_date">
+<code class="sig-name descname">second_ex_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.second_ex_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.second_payment_date">
+<code class="sig-name descname">second_payment_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.second_payment_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.security_type">
+<code class="sig-name descname">security_type</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.security_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.symbol">
+<code class="sig-name descname">symbol</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.symbol" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.tax_rate">
+<code class="sig-name descname">tax_rate</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.tax_rate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.to_date">
+<code class="sig-name descname">to_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.to_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.ca.AdvancedDividend.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.AdvancedDividend.to_factor">
+<code class="sig-name descname">to_factor</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.to_factor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.ca.AdvancedDividend.to_json">
+<code class="sig-name descname">to_json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.ca.AdvancedDividend.to_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="iex_api.model.ca.BasicDividend">
+<em class="property">class </em><code class="sig-prename descclassname">iex_api.model.ca.</code><code class="sig-name descname">BasicDividend</code><span class="sig-paren">(</span><em class="sig-param">id: str, key: str, source: Optional[str], sub_key: Optional[str], date: Optional[datetime.date], updated: Optional[datetime.date], amount: float, currency: str, declared_date: datetime.date, description: str, ex_date: datetime.date, flag: str, frequency: str, payment_date: datetime.date, record_date: datetime.date, refid: int, symbol: str</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/ca.html#BasicDividend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.ca.BasicDividend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#iex_api.model.common.IEXTimeSeriesObject" title="iex_api.model.common.IEXTimeSeriesObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">iex_api.model.common.IEXTimeSeriesObject</span></code></a></p>
+<dl class="attribute">
+<dt id="iex_api.model.ca.BasicDividend.ID">
+<code class="sig-name descname">ID</code><em class="property"> = 'DIVIDENDS'</em><a class="headerlink" href="#iex_api.model.ca.BasicDividend.ID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.BasicDividend.amount">
+<code class="sig-name descname">amount</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.BasicDividend.amount" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.BasicDividend.currency">
+<code class="sig-name descname">currency</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.BasicDividend.currency" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.BasicDividend.dataclass_json_config">
+<code class="sig-name descname">dataclass_json_config</code><em class="property"> = {'letter_case': &lt;function camelcase&gt;}</em><a class="headerlink" href="#iex_api.model.ca.BasicDividend.dataclass_json_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.BasicDividend.declared_date">
+<code class="sig-name descname">declared_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.BasicDividend.declared_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.BasicDividend.description">
+<code class="sig-name descname">description</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.BasicDividend.description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.BasicDividend.ex_date">
+<code class="sig-name descname">ex_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.BasicDividend.ex_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.BasicDividend.flag">
+<code class="sig-name descname">flag</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.BasicDividend.flag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.BasicDividend.frequency">
+<code class="sig-name descname">frequency</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.BasicDividend.frequency" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.ca.BasicDividend.from_dict">
+<em class="property">classmethod </em><code class="sig-name descname">from_dict</code><span class="sig-paren">(</span><em class="sig-param">kvs: Union[dict, list, str, int, float, bool, None], *, infer_missing=False</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.ca.BasicDividend.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.ca.BasicDividend.from_json">
+<em class="property">classmethod </em><code class="sig-name descname">from_json</code><span class="sig-paren">(</span><em class="sig-param">s: Union[str, bytes, bytearray], *, parse_float=None, parse_int=None, parse_constant=None, infer_missing=False, **kw</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.ca.BasicDividend.from_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.BasicDividend.payment_date">
+<code class="sig-name descname">payment_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.BasicDividend.payment_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.BasicDividend.record_date">
+<code class="sig-name descname">record_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.BasicDividend.record_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.BasicDividend.refid">
+<code class="sig-name descname">refid</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.BasicDividend.refid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.ca.BasicDividend.schema">
+<em class="property">classmethod </em><code class="sig-name descname">schema</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.ca.BasicDividend.schema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.ca.BasicDividend.symbol">
+<code class="sig-name descname">symbol</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.ca.BasicDividend.symbol" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.ca.BasicDividend.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.ca.BasicDividend.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.ca.BasicDividend.to_json">
+<code class="sig-name descname">to_json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.ca.BasicDividend.to_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
 <div class="section" id="module-iex_api.model.common">
 <span id="iex-api-model-common-module"></span><h2>iex_api.model.common module<a class="headerlink" href="#module-iex_api.model.common" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="iex_api.model.common.IEXTimeSeriesObject">
-<em class="property">class </em><code class="sig-prename descclassname">iex_api.model.common.</code><code class="sig-name descname">IEXTimeSeriesObject</code><span class="sig-paren">(</span><em class="sig-param">id: str = None</em>, <em class="sig-param">source: str = None</em>, <em class="sig-param">key: str = None</em>, <em class="sig-param">sub_key: str = None</em>, <em class="sig-param">date: datetime.date = None</em>, <em class="sig-param">updated: datetime.date = None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#IEXTimeSeriesObject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.IEXTimeSeriesObject" title="Permalink to this definition">¶</a></dt>
+<dt id="iex_api.model.common.IEXBaseMixin">
+<em class="property">class </em><code class="sig-prename descclassname">iex_api.model.common.</code><code class="sig-name descname">IEXBaseMixin</code><a class="reference internal" href="_modules/iex_api/model/common.html#IEXBaseMixin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.IEXBaseMixin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="iex_api.model.common.IEXBaseMixin.api">
+<em class="property">classmethod </em><code class="sig-name descname">api</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#IEXBaseMixin.api"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.IEXBaseMixin.api" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="iex_api.model.common.IEXTimeSeriesObject">
+<em class="property">class </em><code class="sig-prename descclassname">iex_api.model.common.</code><code class="sig-name descname">IEXTimeSeriesObject</code><span class="sig-paren">(</span><em class="sig-param">id: str, key: str, source: Optional[str], sub_key: Optional[str], date: Optional[datetime.date], updated: Optional[datetime.date]</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#IEXTimeSeriesObject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.IEXTimeSeriesObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#iex_api.model.common.IEXBaseMixin" title="iex_api.model.common.IEXBaseMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">iex_api.model.common.IEXBaseMixin</span></code></a></p>
+<dl class="method">
+<dt id="iex_api.model.common.IEXTimeSeriesObject.all">
+<em class="property">classmethod </em><code class="sig-name descname">all</code><span class="sig-paren">(</span><em class="sig-param">key: str</em>, <em class="sig-param">sub_key: str = None</em>, <em class="sig-param">output_constructor=&lt;class 'list'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#IEXTimeSeriesObject.all"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.IEXTimeSeriesObject.all" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="attribute">
 <dt id="iex_api.model.common.IEXTimeSeriesObject.dataclass_json_config">
 <code class="sig-name descname">dataclass_json_config</code><em class="property"> = {'letter_case': &lt;function camelcase&gt;}</em><a class="headerlink" href="#iex_api.model.common.IEXTimeSeriesObject.dataclass_json_config" title="Permalink to this definition">¶</a></dt>
@@ -207,7 +573,7 @@
 
 <dl class="attribute">
 <dt id="iex_api.model.common.IEXTimeSeriesObject.date">
-<code class="sig-name descname">date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.common.IEXTimeSeriesObject.date" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">date</code><em class="property">: Optional[datetime.date]</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.common.IEXTimeSeriesObject.date" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -231,18 +597,28 @@
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="iex_api.model.common.IEXTimeSeriesObject.latest">
+<em class="property">classmethod </em><code class="sig-name descname">latest</code><span class="sig-paren">(</span><em class="sig-param">key: str</em>, <em class="sig-param">sub_key: str = None</em>, <em class="sig-param">n: int = 1</em>, <em class="sig-param">output_constructor=&lt;class 'list'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#IEXTimeSeriesObject.latest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.IEXTimeSeriesObject.latest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="iex_api.model.common.IEXTimeSeriesObject.schema">
 <em class="property">classmethod </em><code class="sig-name descname">schema</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.common.IEXTimeSeriesObject.schema" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="method">
+<dt id="iex_api.model.common.IEXTimeSeriesObject.series">
+<em class="property">classmethod </em><code class="sig-name descname">series</code><span class="sig-paren">(</span><em class="sig-param">key: str</em>, <em class="sig-param">sub_key: str</em>, <em class="sig-param">request: iex_api.api.model.model.TimeSeriesRequest = None</em>, <em class="sig-param">output_constructor=&lt;class 'list'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#IEXTimeSeriesObject.series"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.IEXTimeSeriesObject.series" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="attribute">
 <dt id="iex_api.model.common.IEXTimeSeriesObject.source">
-<code class="sig-name descname">source</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.common.IEXTimeSeriesObject.source" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">source</code><em class="property">: Optional[str]</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.common.IEXTimeSeriesObject.source" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="iex_api.model.common.IEXTimeSeriesObject.sub_key">
-<code class="sig-name descname">sub_key</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.common.IEXTimeSeriesObject.sub_key" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sub_key</code><em class="property">: Optional[str]</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.common.IEXTimeSeriesObject.sub_key" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -257,7 +633,1295 @@
 
 <dl class="attribute">
 <dt id="iex_api.model.common.IEXTimeSeriesObject.updated">
-<code class="sig-name descname">updated</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.common.IEXTimeSeriesObject.updated" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">updated</code><em class="property">: Optional[datetime.date]</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.common.IEXTimeSeriesObject.updated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="iex_api.model.common.Symbol">
+<em class="property">class </em><code class="sig-prename descclassname">iex_api.model.common.</code><code class="sig-name descname">Symbol</code><span class="sig-paren">(</span><em class="sig-param">symbol: str</em>, <em class="sig-param">exchange: str</em>, <em class="sig-param">name: str</em>, <em class="sig-param">date: datetime.date</em>, <em class="sig-param">type: str</em>, <em class="sig-param">iexId: str</em>, <em class="sig-param">region: str</em>, <em class="sig-param">currency: str</em>, <em class="sig-param">isEnabled: bool</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#Symbol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.Symbol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#iex_api.model.common.IEXBaseMixin" title="iex_api.model.common.IEXBaseMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">iex_api.model.common.IEXBaseMixin</span></code></a></p>
+<dl class="attribute">
+<dt id="iex_api.model.common.Symbol.currency">
+<code class="sig-name descname">currency</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.common.Symbol.currency" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.common.Symbol.dataclass_json_config">
+<code class="sig-name descname">dataclass_json_config</code><em class="property"> = {'letter_case': &lt;function camelcase&gt;}</em><a class="headerlink" href="#iex_api.model.common.Symbol.dataclass_json_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.common.Symbol.date">
+<code class="sig-name descname">date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.common.Symbol.date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.common.Symbol.exchange">
+<code class="sig-name descname">exchange</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.common.Symbol.exchange" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.common.Symbol.from_dict">
+<em class="property">classmethod </em><code class="sig-name descname">from_dict</code><span class="sig-paren">(</span><em class="sig-param">kvs: Union[dict, list, str, int, float, bool, None], *, infer_missing=False</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.common.Symbol.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.common.Symbol.from_json">
+<em class="property">classmethod </em><code class="sig-name descname">from_json</code><span class="sig-paren">(</span><em class="sig-param">s: Union[str, bytes, bytearray], *, parse_float=None, parse_int=None, parse_constant=None, infer_missing=False, **kw</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.common.Symbol.from_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.common.Symbol.get_all_symbols_for_region">
+<em class="property">classmethod </em><code class="sig-name descname">get_all_symbols_for_region</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#Symbol.get_all_symbols_for_region"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.Symbol.get_all_symbols_for_region" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.common.Symbol.iexId">
+<code class="sig-name descname">iexId</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.common.Symbol.iexId" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.common.Symbol.isEnabled">
+<code class="sig-name descname">isEnabled</code><em class="property">: bool</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.common.Symbol.isEnabled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.common.Symbol.name">
+<code class="sig-name descname">name</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.common.Symbol.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.common.Symbol.region">
+<code class="sig-name descname">region</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.common.Symbol.region" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.common.Symbol.schema">
+<em class="property">classmethod </em><code class="sig-name descname">schema</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.common.Symbol.schema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.common.Symbol.symbol">
+<code class="sig-name descname">symbol</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.common.Symbol.symbol" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.common.Symbol.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.common.Symbol.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.common.Symbol.to_json">
+<code class="sig-name descname">to_json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.common.Symbol.to_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.common.Symbol.type">
+<code class="sig-name descname">type</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.common.Symbol.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="iex_api.model.common.SymbolMixin">
+<em class="property">class </em><code class="sig-prename descclassname">iex_api.model.common.</code><code class="sig-name descname">SymbolMixin</code><span class="sig-paren">(</span><em class="sig-param">symbol: str</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#SymbolMixin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.SymbolMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#iex_api.model.common.IEXBaseMixin" title="iex_api.model.common.IEXBaseMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">iex_api.model.common.IEXBaseMixin</span></code></a></p>
+<dl class="method">
+<dt id="iex_api.model.common.SymbolMixin.from_symbol">
+<em class="property">classmethod </em><code class="sig-name descname">from_symbol</code><span class="sig-paren">(</span><em class="sig-param">symbol: str</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#SymbolMixin.from_symbol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.SymbolMixin.from_symbol" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.common.SymbolMixin.symbol">
+<code class="sig-name descname">symbol</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.common.SymbolMixin.symbol" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-iex_api.model.company">
+<span id="iex-api-model-company-module"></span><h2>iex_api.model.company module<a class="headerlink" href="#module-iex_api.model.company" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="iex_api.model.company.CashFlow">
+<em class="property">class </em><code class="sig-prename descclassname">iex_api.model.company.</code><code class="sig-name descname">CashFlow</code><span class="sig-paren">(</span><em class="sig-param">id: str, key: str, source: Optional[str], sub_key: Optional[str], date: Optional[datetime.date], updated: Optional[datetime.date], capital_expenditures: int, cash_change: int, cash_flow: int, cash_flow_financing: int, changes_in_inventories: int, changes_in_receivables: int, currency: str, depreciation: int, dividends_paid: int, exchange_rate_effect: int, fiscal_date: datetime.date, investing_activity_other: int, investments: int, net_borrowings: int, net_income: int, other_financing_cash_flows: int, report_date: datetime.date, symbol: str, total_investing_cash_flows: int</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/company.html#CashFlow"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.company.CashFlow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#iex_api.model.common.IEXTimeSeriesObject" title="iex_api.model.common.IEXTimeSeriesObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">iex_api.model.common.IEXTimeSeriesObject</span></code></a></p>
+<dl class="attribute">
+<dt id="iex_api.model.company.CashFlow.ID">
+<code class="sig-name descname">ID</code><em class="property"> = 'CASH_FLOW'</em><a class="headerlink" href="#iex_api.model.company.CashFlow.ID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.CashFlow.capital_expenditures">
+<code class="sig-name descname">capital_expenditures</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.CashFlow.capital_expenditures" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.CashFlow.cash_change">
+<code class="sig-name descname">cash_change</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.CashFlow.cash_change" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.CashFlow.cash_flow">
+<code class="sig-name descname">cash_flow</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.CashFlow.cash_flow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.CashFlow.cash_flow_financing">
+<code class="sig-name descname">cash_flow_financing</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.CashFlow.cash_flow_financing" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.CashFlow.changes_in_inventories">
+<code class="sig-name descname">changes_in_inventories</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.CashFlow.changes_in_inventories" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.CashFlow.changes_in_receivables">
+<code class="sig-name descname">changes_in_receivables</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.CashFlow.changes_in_receivables" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.CashFlow.currency">
+<code class="sig-name descname">currency</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.CashFlow.currency" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.CashFlow.dataclass_json_config">
+<code class="sig-name descname">dataclass_json_config</code><em class="property"> = {'letter_case': &lt;function camelcase&gt;}</em><a class="headerlink" href="#iex_api.model.company.CashFlow.dataclass_json_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.CashFlow.depreciation">
+<code class="sig-name descname">depreciation</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.CashFlow.depreciation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.CashFlow.dividends_paid">
+<code class="sig-name descname">dividends_paid</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.CashFlow.dividends_paid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.CashFlow.exchange_rate_effect">
+<code class="sig-name descname">exchange_rate_effect</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.CashFlow.exchange_rate_effect" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.CashFlow.fiscal_date">
+<code class="sig-name descname">fiscal_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.CashFlow.fiscal_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.CashFlow.from_dict">
+<em class="property">classmethod </em><code class="sig-name descname">from_dict</code><span class="sig-paren">(</span><em class="sig-param">kvs: Union[dict, list, str, int, float, bool, None], *, infer_missing=False</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.company.CashFlow.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.CashFlow.from_json">
+<em class="property">classmethod </em><code class="sig-name descname">from_json</code><span class="sig-paren">(</span><em class="sig-param">s: Union[str, bytes, bytearray], *, parse_float=None, parse_int=None, parse_constant=None, infer_missing=False, **kw</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.company.CashFlow.from_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.CashFlow.investing_activity_other">
+<code class="sig-name descname">investing_activity_other</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.CashFlow.investing_activity_other" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.CashFlow.investments">
+<code class="sig-name descname">investments</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.CashFlow.investments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.CashFlow.net_borrowings">
+<code class="sig-name descname">net_borrowings</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.CashFlow.net_borrowings" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.CashFlow.net_income">
+<code class="sig-name descname">net_income</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.CashFlow.net_income" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.CashFlow.other_financing_cash_flows">
+<code class="sig-name descname">other_financing_cash_flows</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.CashFlow.other_financing_cash_flows" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.CashFlow.report_date">
+<code class="sig-name descname">report_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.CashFlow.report_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.CashFlow.schema">
+<em class="property">classmethod </em><code class="sig-name descname">schema</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.company.CashFlow.schema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.CashFlow.symbol">
+<code class="sig-name descname">symbol</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.CashFlow.symbol" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.CashFlow.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.company.CashFlow.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.CashFlow.to_json">
+<code class="sig-name descname">to_json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.company.CashFlow.to_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.CashFlow.total_investing_cash_flows">
+<code class="sig-name descname">total_investing_cash_flows</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.CashFlow.total_investing_cash_flows" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="iex_api.model.company.Company">
+<em class="property">class </em><code class="sig-prename descclassname">iex_api.model.company.</code><code class="sig-name descname">Company</code><span class="sig-paren">(</span><em class="sig-param">symbol: str, company_name: str, exchange: str, industry: str, website: str, description: str, CEO: str, security_name: str, issue_type: str, sector: str, primary_sic_code: int, employees: int, tags: List[str], address: str, address2: Optional[str], state: str, city: str, zip: str, country: str, phone: str</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/company.html#Company"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.company.Company" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#iex_api.model.common.SymbolMixin" title="iex_api.model.common.SymbolMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">iex_api.model.common.SymbolMixin</span></code></a></p>
+<dl class="attribute">
+<dt id="iex_api.model.company.Company.CEO">
+<code class="sig-name descname">CEO</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Company.CEO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Company.address">
+<code class="sig-name descname">address</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Company.address" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Company.address2">
+<code class="sig-name descname">address2</code><em class="property">: Optional[str]</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Company.address2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Company.city">
+<code class="sig-name descname">city</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Company.city" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Company.company_name">
+<code class="sig-name descname">company_name</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Company.company_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Company.country">
+<code class="sig-name descname">country</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Company.country" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Company.dataclass_json_config">
+<code class="sig-name descname">dataclass_json_config</code><em class="property"> = {'letter_case': &lt;function camelcase&gt;}</em><a class="headerlink" href="#iex_api.model.company.Company.dataclass_json_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Company.description">
+<code class="sig-name descname">description</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Company.description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Company.employees">
+<code class="sig-name descname">employees</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Company.employees" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Company.exchange">
+<code class="sig-name descname">exchange</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Company.exchange" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.Company.from_dict">
+<em class="property">classmethod </em><code class="sig-name descname">from_dict</code><span class="sig-paren">(</span><em class="sig-param">kvs: Union[dict, list, str, int, float, bool, None], *, infer_missing=False</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.company.Company.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.Company.from_json">
+<em class="property">classmethod </em><code class="sig-name descname">from_json</code><span class="sig-paren">(</span><em class="sig-param">s: Union[str, bytes, bytearray], *, parse_float=None, parse_int=None, parse_constant=None, infer_missing=False, **kw</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.company.Company.from_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.Company.from_symbol">
+<em class="property">classmethod </em><code class="sig-name descname">from_symbol</code><span class="sig-paren">(</span><em class="sig-param">symbol: str</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/company.html#Company.from_symbol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.company.Company.from_symbol" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Company.industry">
+<code class="sig-name descname">industry</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Company.industry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Company.issue_type">
+<code class="sig-name descname">issue_type</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Company.issue_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Company.phone">
+<code class="sig-name descname">phone</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Company.phone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Company.primary_sic_code">
+<code class="sig-name descname">primary_sic_code</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Company.primary_sic_code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.Company.schema">
+<em class="property">classmethod </em><code class="sig-name descname">schema</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.company.Company.schema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Company.sector">
+<code class="sig-name descname">sector</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Company.sector" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Company.security_name">
+<code class="sig-name descname">security_name</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Company.security_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Company.state">
+<code class="sig-name descname">state</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Company.state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Company.tags">
+<code class="sig-name descname">tags</code><em class="property">: List[str]</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Company.tags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.Company.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.company.Company.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.Company.to_json">
+<code class="sig-name descname">to_json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.company.Company.to_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Company.website">
+<code class="sig-name descname">website</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Company.website" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Company.zip">
+<code class="sig-name descname">zip</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Company.zip" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="iex_api.model.company.Financials">
+<em class="property">class </em><code class="sig-prename descclassname">iex_api.model.company.</code><code class="sig-name descname">Financials</code><span class="sig-paren">(</span><em class="sig-param">id: str, key: str, source: Optional[str], sub_key: Optional[str], date: Optional[datetime.date], updated: Optional[datetime.date], EBITDA: int, accounts_payable: int, capital_surplus: int, cash_change: int, cash_flow: int, cash_flow_financing: int, changes_in_inventories: int, changes_in_receivables: int, common_stock: int, cost_of_revenue: int, currency: str, current_assets: int, current_cash: int, current_debt: int, current_long_term_debt: int, depreciation: int, dividends_paid: int, ebit: int, exchange_rate_effect: int, fiscal_date: datetime.date, goodwill: int, gross_profit: int, income_tax: int, intangible_assets: int, interest_income: int, inventory: int, investing_activity_other: int, investments: int, longTerm_debt: int, longTerm_investments: int, minority_interest: int, net_borrowings: int, net_income: int, net_income_basic: int, net_tangible_assets: int, operating_expense: int, operating_income: int, operating_revenue: int, other_assets: int, other_current_assets: int, other_current_liabilities: int, other_income_expense_net: int, other_liabilities: int, pretax_income: int, property_plant_equipment: int, receivables: int, report_date: datetime.date, research_and_development: int, retained_earnings: int, revenue: int, selling_general_and_admin: int, shareholder_equity: int, shortTerm_debt: int, shortTerm_investments: int, symbol: str, total_assets: int, total_cash: int, total_debt: int, total_investing_cash_flows: int, total_liabilities: int, total_revenue: int, treasury_stock: int</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/company.html#Financials"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.company.Financials" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#iex_api.model.common.IEXTimeSeriesObject" title="iex_api.model.common.IEXTimeSeriesObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">iex_api.model.common.IEXTimeSeriesObject</span></code></a></p>
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.EBITDA">
+<code class="sig-name descname">EBITDA</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.EBITDA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.ID">
+<code class="sig-name descname">ID</code><em class="property"> = 'FINANCIALS'</em><a class="headerlink" href="#iex_api.model.company.Financials.ID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.accounts_payable">
+<code class="sig-name descname">accounts_payable</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.accounts_payable" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.capital_surplus">
+<code class="sig-name descname">capital_surplus</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.capital_surplus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.cash_change">
+<code class="sig-name descname">cash_change</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.cash_change" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.cash_flow">
+<code class="sig-name descname">cash_flow</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.cash_flow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.cash_flow_financing">
+<code class="sig-name descname">cash_flow_financing</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.cash_flow_financing" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.changes_in_inventories">
+<code class="sig-name descname">changes_in_inventories</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.changes_in_inventories" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.changes_in_receivables">
+<code class="sig-name descname">changes_in_receivables</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.changes_in_receivables" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.common_stock">
+<code class="sig-name descname">common_stock</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.common_stock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.cost_of_revenue">
+<code class="sig-name descname">cost_of_revenue</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.cost_of_revenue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.currency">
+<code class="sig-name descname">currency</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.currency" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.current_assets">
+<code class="sig-name descname">current_assets</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.current_assets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.current_cash">
+<code class="sig-name descname">current_cash</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.current_cash" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.current_debt">
+<code class="sig-name descname">current_debt</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.current_debt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.current_long_term_debt">
+<code class="sig-name descname">current_long_term_debt</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.current_long_term_debt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.dataclass_json_config">
+<code class="sig-name descname">dataclass_json_config</code><em class="property"> = {'letter_case': &lt;function camelcase&gt;}</em><a class="headerlink" href="#iex_api.model.company.Financials.dataclass_json_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.depreciation">
+<code class="sig-name descname">depreciation</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.depreciation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.dividends_paid">
+<code class="sig-name descname">dividends_paid</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.dividends_paid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.ebit">
+<code class="sig-name descname">ebit</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.ebit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.exchange_rate_effect">
+<code class="sig-name descname">exchange_rate_effect</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.exchange_rate_effect" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.fiscal_date">
+<code class="sig-name descname">fiscal_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.fiscal_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.Financials.from_dict">
+<em class="property">classmethod </em><code class="sig-name descname">from_dict</code><span class="sig-paren">(</span><em class="sig-param">kvs: Union[dict, list, str, int, float, bool, None], *, infer_missing=False</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.company.Financials.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.Financials.from_json">
+<em class="property">classmethod </em><code class="sig-name descname">from_json</code><span class="sig-paren">(</span><em class="sig-param">s: Union[str, bytes, bytearray], *, parse_float=None, parse_int=None, parse_constant=None, infer_missing=False, **kw</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.company.Financials.from_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.goodwill">
+<code class="sig-name descname">goodwill</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.goodwill" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.gross_profit">
+<code class="sig-name descname">gross_profit</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.gross_profit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.income_tax">
+<code class="sig-name descname">income_tax</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.income_tax" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.intangible_assets">
+<code class="sig-name descname">intangible_assets</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.intangible_assets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.interest_income">
+<code class="sig-name descname">interest_income</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.interest_income" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.inventory">
+<code class="sig-name descname">inventory</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.inventory" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.investing_activity_other">
+<code class="sig-name descname">investing_activity_other</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.investing_activity_other" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.investments">
+<code class="sig-name descname">investments</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.investments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.longTerm_debt">
+<code class="sig-name descname">longTerm_debt</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.longTerm_debt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.longTerm_investments">
+<code class="sig-name descname">longTerm_investments</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.longTerm_investments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.minority_interest">
+<code class="sig-name descname">minority_interest</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.minority_interest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.net_borrowings">
+<code class="sig-name descname">net_borrowings</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.net_borrowings" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.net_income">
+<code class="sig-name descname">net_income</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.net_income" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.net_income_basic">
+<code class="sig-name descname">net_income_basic</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.net_income_basic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.net_tangible_assets">
+<code class="sig-name descname">net_tangible_assets</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.net_tangible_assets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.operating_expense">
+<code class="sig-name descname">operating_expense</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.operating_expense" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.operating_income">
+<code class="sig-name descname">operating_income</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.operating_income" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.operating_revenue">
+<code class="sig-name descname">operating_revenue</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.operating_revenue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.other_assets">
+<code class="sig-name descname">other_assets</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.other_assets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.other_current_assets">
+<code class="sig-name descname">other_current_assets</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.other_current_assets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.other_current_liabilities">
+<code class="sig-name descname">other_current_liabilities</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.other_current_liabilities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.other_income_expense_net">
+<code class="sig-name descname">other_income_expense_net</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.other_income_expense_net" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.other_liabilities">
+<code class="sig-name descname">other_liabilities</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.other_liabilities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.pretax_income">
+<code class="sig-name descname">pretax_income</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.pretax_income" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.property_plant_equipment">
+<code class="sig-name descname">property_plant_equipment</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.property_plant_equipment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.receivables">
+<code class="sig-name descname">receivables</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.receivables" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.report_date">
+<code class="sig-name descname">report_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.report_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.research_and_development">
+<code class="sig-name descname">research_and_development</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.research_and_development" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.retained_earnings">
+<code class="sig-name descname">retained_earnings</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.retained_earnings" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.revenue">
+<code class="sig-name descname">revenue</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.revenue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.Financials.schema">
+<em class="property">classmethod </em><code class="sig-name descname">schema</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.company.Financials.schema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.selling_general_and_admin">
+<code class="sig-name descname">selling_general_and_admin</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.selling_general_and_admin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.shareholder_equity">
+<code class="sig-name descname">shareholder_equity</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.shareholder_equity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.shortTerm_debt">
+<code class="sig-name descname">shortTerm_debt</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.shortTerm_debt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.shortTerm_investments">
+<code class="sig-name descname">shortTerm_investments</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.shortTerm_investments" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.symbol">
+<code class="sig-name descname">symbol</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.symbol" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.Financials.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.company.Financials.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.Financials.to_json">
+<code class="sig-name descname">to_json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.company.Financials.to_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.total_assets">
+<code class="sig-name descname">total_assets</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.total_assets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.total_cash">
+<code class="sig-name descname">total_cash</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.total_cash" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.total_debt">
+<code class="sig-name descname">total_debt</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.total_debt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.total_investing_cash_flows">
+<code class="sig-name descname">total_investing_cash_flows</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.total_investing_cash_flows" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.total_liabilities">
+<code class="sig-name descname">total_liabilities</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.total_liabilities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.total_revenue">
+<code class="sig-name descname">total_revenue</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.total_revenue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Financials.treasury_stock">
+<code class="sig-name descname">treasury_stock</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Financials.treasury_stock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="iex_api.model.company.Income">
+<em class="property">class </em><code class="sig-prename descclassname">iex_api.model.company.</code><code class="sig-name descname">Income</code><span class="sig-paren">(</span><em class="sig-param">id: str, key: str, source: Optional[str], sub_key: Optional[str], date: Optional[datetime.date], updated: Optional[datetime.date], report_date: datetime.date, fiscal_date: datetime.date, currency: str, total_revenue: int, cost_of_revenue: int, gross_profit: int, research_and_development: int, selling_general_and_admin: int, operating_expense: int, operating_income: int, other_income_expense_net: int, ebit: int, interest_income: int, pretax_income: int, income_tax: int, minority_interest: int, net_income: int, net_incomeBasic: int</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/company.html#Income"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.company.Income" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#iex_api.model.common.IEXTimeSeriesObject" title="iex_api.model.common.IEXTimeSeriesObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">iex_api.model.common.IEXTimeSeriesObject</span></code></a></p>
+<dl class="attribute">
+<dt id="iex_api.model.company.Income.ID">
+<code class="sig-name descname">ID</code><em class="property"> = 'INCOME'</em><a class="headerlink" href="#iex_api.model.company.Income.ID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Income.cost_of_revenue">
+<code class="sig-name descname">cost_of_revenue</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Income.cost_of_revenue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Income.currency">
+<code class="sig-name descname">currency</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Income.currency" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Income.dataclass_json_config">
+<code class="sig-name descname">dataclass_json_config</code><em class="property"> = {'letter_case': &lt;function camelcase&gt;}</em><a class="headerlink" href="#iex_api.model.company.Income.dataclass_json_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Income.ebit">
+<code class="sig-name descname">ebit</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Income.ebit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Income.fiscal_date">
+<code class="sig-name descname">fiscal_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Income.fiscal_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.Income.from_dict">
+<em class="property">classmethod </em><code class="sig-name descname">from_dict</code><span class="sig-paren">(</span><em class="sig-param">kvs: Union[dict, list, str, int, float, bool, None], *, infer_missing=False</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.company.Income.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.Income.from_json">
+<em class="property">classmethod </em><code class="sig-name descname">from_json</code><span class="sig-paren">(</span><em class="sig-param">s: Union[str, bytes, bytearray], *, parse_float=None, parse_int=None, parse_constant=None, infer_missing=False, **kw</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.company.Income.from_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Income.gross_profit">
+<code class="sig-name descname">gross_profit</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Income.gross_profit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Income.income_tax">
+<code class="sig-name descname">income_tax</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Income.income_tax" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Income.interest_income">
+<code class="sig-name descname">interest_income</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Income.interest_income" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Income.minority_interest">
+<code class="sig-name descname">minority_interest</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Income.minority_interest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Income.net_income">
+<code class="sig-name descname">net_income</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Income.net_income" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Income.net_incomeBasic">
+<code class="sig-name descname">net_incomeBasic</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Income.net_incomeBasic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Income.operating_expense">
+<code class="sig-name descname">operating_expense</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Income.operating_expense" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Income.operating_income">
+<code class="sig-name descname">operating_income</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Income.operating_income" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Income.other_income_expense_net">
+<code class="sig-name descname">other_income_expense_net</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Income.other_income_expense_net" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Income.pretax_income">
+<code class="sig-name descname">pretax_income</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Income.pretax_income" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Income.report_date">
+<code class="sig-name descname">report_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Income.report_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Income.research_and_development">
+<code class="sig-name descname">research_and_development</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Income.research_and_development" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.Income.schema">
+<em class="property">classmethod </em><code class="sig-name descname">schema</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.company.Income.schema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Income.selling_general_and_admin">
+<code class="sig-name descname">selling_general_and_admin</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Income.selling_general_and_admin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.Income.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.company.Income.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.Income.to_json">
+<code class="sig-name descname">to_json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.company.Income.to_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Income.total_revenue">
+<code class="sig-name descname">total_revenue</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Income.total_revenue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-iex_api.model.options">
+<span id="iex-api-model-options-module"></span><h2>iex_api.model.options module<a class="headerlink" href="#module-iex_api.model.options" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="iex_api.model.options.EndOfDayOptions">
+<em class="property">class </em><code class="sig-prename descclassname">iex_api.model.options.</code><code class="sig-name descname">EndOfDayOptions</code><span class="sig-paren">(</span><em class="sig-param">id: str, key: str, source: Optional[str], sub_key: Optional[str], date: Optional[datetime.date], updated: Optional[datetime.date], ask: float, bid: float, cfi_code: str, close: float, closing_price: float, contract_description: str, contract_name: str, contract_size: int, currency: str, exchange_code: str, exchange_MIC: str, exercise_style: str, expiration_date: datetime.date, figi: str, high: float, is_adjusted: bool, last_trade_date: datetime.date, last_trade_time: datetime.time, last_updated: datetime.date, low: float, margin_price: float, open: float, open_interest: int, settlement_price: float, side: str, strike_price: float, symbol: str, type: str, volume: int</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/options.html#EndOfDayOptions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#iex_api.model.common.IEXTimeSeriesObject" title="iex_api.model.common.IEXTimeSeriesObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">iex_api.model.common.IEXTimeSeriesObject</span></code></a></p>
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.ask">
+<code class="sig-name descname">ask</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.ask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.bid">
+<code class="sig-name descname">bid</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.bid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.cfi_code">
+<code class="sig-name descname">cfi_code</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.cfi_code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.close">
+<code class="sig-name descname">close</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.closing_price">
+<code class="sig-name descname">closing_price</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.closing_price" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.contract_description">
+<code class="sig-name descname">contract_description</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.contract_description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.contract_name">
+<code class="sig-name descname">contract_name</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.contract_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.contract_size">
+<code class="sig-name descname">contract_size</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.contract_size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.currency">
+<code class="sig-name descname">currency</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.currency" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.dataclass_json_config">
+<code class="sig-name descname">dataclass_json_config</code><em class="property"> = {'letter_case': &lt;function camelcase&gt;}</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.dataclass_json_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.exchange_MIC">
+<code class="sig-name descname">exchange_MIC</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.exchange_MIC" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.exchange_code">
+<code class="sig-name descname">exchange_code</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.exchange_code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.exercise_style">
+<code class="sig-name descname">exercise_style</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.exercise_style" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.expiration_date">
+<code class="sig-name descname">expiration_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.expiration_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.figi">
+<code class="sig-name descname">figi</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.figi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.options.EndOfDayOptions.from_dict">
+<em class="property">classmethod </em><code class="sig-name descname">from_dict</code><span class="sig-paren">(</span><em class="sig-param">kvs: Union[dict, list, str, int, float, bool, None], *, infer_missing=False</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.options.EndOfDayOptions.from_json">
+<em class="property">classmethod </em><code class="sig-name descname">from_json</code><span class="sig-paren">(</span><em class="sig-param">s: Union[str, bytes, bytearray], *, parse_float=None, parse_int=None, parse_constant=None, infer_missing=False, **kw</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.from_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.high">
+<code class="sig-name descname">high</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.high" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.is_adjusted">
+<code class="sig-name descname">is_adjusted</code><em class="property">: bool</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.is_adjusted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.last_trade_date">
+<code class="sig-name descname">last_trade_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.last_trade_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.last_trade_time">
+<code class="sig-name descname">last_trade_time</code><em class="property">: datetime.time</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.last_trade_time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.last_updated">
+<code class="sig-name descname">last_updated</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.last_updated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.options.EndOfDayOptions.latest">
+<em class="property">classmethod </em><code class="sig-name descname">latest</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/options.html#EndOfDayOptions.latest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.latest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.low">
+<code class="sig-name descname">low</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.low" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.margin_price">
+<code class="sig-name descname">margin_price</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.margin_price" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.open">
+<code class="sig-name descname">open</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.open" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.open_interest">
+<code class="sig-name descname">open_interest</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.open_interest" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.options.EndOfDayOptions.schema">
+<em class="property">classmethod </em><code class="sig-name descname">schema</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.schema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.settlement_price">
+<code class="sig-name descname">settlement_price</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.settlement_price" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.side">
+<code class="sig-name descname">side</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.side" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.strike_price">
+<code class="sig-name descname">strike_price</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.strike_price" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.symbol">
+<code class="sig-name descname">symbol</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.symbol" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.options.EndOfDayOptions.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.options.EndOfDayOptions.to_json">
+<code class="sig-name descname">to_json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.to_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.type">
+<code class="sig-name descname">type</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.options.EndOfDayOptions.volume">
+<code class="sig-name descname">volume</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.volume" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-iex_api.model.stocks">
+<span id="iex-api-model-stocks-module"></span><h2>iex_api.model.stocks module<a class="headerlink" href="#module-iex_api.model.stocks" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="iex_api.model.stocks.HistoricalStockPrice">
+<em class="property">class </em><code class="sig-prename descclassname">iex_api.model.stocks.</code><code class="sig-name descname">HistoricalStockPrice</code><span class="sig-paren">(</span><em class="sig-param">symbol: str, id: str, key: str, source: Optional[str], sub_key: Optional[str], date: Optional[datetime.date], updated: Optional[datetime.date], close: float, high: float, low: float, open: float, volume: int, change_over_time: float, market_change_over_time: float, u_open: Optional[float], u_close: Optional[float], u_high: Optional[float], u_low: Optional[float], u_volume: Optional[int], f_open: Optional[float], f_close: Optional[float], f_high: Optional[float], f_flow: Optional[float], f_volume: Optional[int], label: str, change: Optional[float], change_percent: Optional[float]</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/stocks.html#HistoricalStockPrice"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#iex_api.model.common.IEXTimeSeriesObject" title="iex_api.model.common.IEXTimeSeriesObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">iex_api.model.common.IEXTimeSeriesObject</span></code></a>, <a class="reference internal" href="#iex_api.model.common.SymbolMixin" title="iex_api.model.common.SymbolMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">iex_api.model.common.SymbolMixin</span></code></a></p>
+<dl class="attribute">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.change">
+<code class="sig-name descname">change</code><em class="property">: Optional[float]</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.change" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.change_over_time">
+<code class="sig-name descname">change_over_time</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.change_over_time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.change_percent">
+<code class="sig-name descname">change_percent</code><em class="property">: Optional[float]</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.change_percent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.close">
+<code class="sig-name descname">close</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.dataclass_json_config">
+<code class="sig-name descname">dataclass_json_config</code><em class="property"> = {'letter_case': &lt;function camelcase&gt;}</em><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.dataclass_json_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.f_close">
+<code class="sig-name descname">f_close</code><em class="property">: Optional[float]</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.f_close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.f_flow">
+<code class="sig-name descname">f_flow</code><em class="property">: Optional[float]</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.f_flow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.f_high">
+<code class="sig-name descname">f_high</code><em class="property">: Optional[float]</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.f_high" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.f_open">
+<code class="sig-name descname">f_open</code><em class="property">: Optional[float]</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.f_open" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.f_volume">
+<code class="sig-name descname">f_volume</code><em class="property">: Optional[int]</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.f_volume" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.from_dict">
+<em class="property">classmethod </em><code class="sig-name descname">from_dict</code><span class="sig-paren">(</span><em class="sig-param">kvs: Union[dict, list, str, int, float, bool, None], *, infer_missing=False</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.from_json">
+<em class="property">classmethod </em><code class="sig-name descname">from_json</code><span class="sig-paren">(</span><em class="sig-param">s: Union[str, bytes, bytearray], *, parse_float=None, parse_int=None, parse_constant=None, infer_missing=False, **kw</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.from_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.from_symbol">
+<em class="property">classmethod </em><code class="sig-name descname">from_symbol</code><span class="sig-paren">(</span><em class="sig-param">symbol: str</em><span class="sig-paren">)</span> &#x2192; iex_api.model.stocks.HistoricalStockPrice<a class="reference internal" href="_modules/iex_api/model/stocks.html#HistoricalStockPrice.from_symbol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.from_symbol" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.high">
+<code class="sig-name descname">high</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.high" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.label">
+<code class="sig-name descname">label</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.label" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.low">
+<code class="sig-name descname">low</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.low" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.market_change_over_time">
+<code class="sig-name descname">market_change_over_time</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.market_change_over_time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.open">
+<code class="sig-name descname">open</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.open" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.schema">
+<em class="property">classmethod </em><code class="sig-name descname">schema</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.schema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.to_json">
+<code class="sig-name descname">to_json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.to_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.u_close">
+<code class="sig-name descname">u_close</code><em class="property">: Optional[float]</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.u_close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.u_high">
+<code class="sig-name descname">u_high</code><em class="property">: Optional[float]</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.u_high" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.u_low">
+<code class="sig-name descname">u_low</code><em class="property">: Optional[float]</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.u_low" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.u_open">
+<code class="sig-name descname">u_open</code><em class="property">: Optional[float]</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.u_open" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.u_volume">
+<code class="sig-name descname">u_volume</code><em class="property">: Optional[int]</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.u_volume" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.volume">
+<code class="sig-name descname">volume</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.volume" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="iex_api.model.stocks.IntraDayStockPrice">
+<em class="property">class </em><code class="sig-prename descclassname">iex_api.model.stocks.</code><code class="sig-name descname">IntraDayStockPrice</code><span class="sig-paren">(</span><em class="sig-param">date: datetime.date</em>, <em class="sig-param">minute: datetime.time</em>, <em class="sig-param">market_average: float</em>, <em class="sig-param">market_number_of_trades: int</em>, <em class="sig-param">market_open: float</em>, <em class="sig-param">market_close: float</em>, <em class="sig-param">market_high: float</em>, <em class="sig-param">market_low: float</em>, <em class="sig-param">market_volume: int</em>, <em class="sig-param">market_change_over_time: float</em>, <em class="sig-param">change_over_time: float</em>, <em class="sig-param">label: str</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/stocks.html#IntraDayStockPrice"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.stocks.IntraDayStockPrice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="iex_api.model.stocks.IntraDayStockPrice.change_over_time">
+<code class="sig-name descname">change_over_time</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.IntraDayStockPrice.change_over_time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.IntraDayStockPrice.dataclass_json_config">
+<code class="sig-name descname">dataclass_json_config</code><em class="property"> = {'letter_case': &lt;function camelcase&gt;}</em><a class="headerlink" href="#iex_api.model.stocks.IntraDayStockPrice.dataclass_json_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.IntraDayStockPrice.date">
+<code class="sig-name descname">date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.IntraDayStockPrice.date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.stocks.IntraDayStockPrice.from_dict">
+<em class="property">classmethod </em><code class="sig-name descname">from_dict</code><span class="sig-paren">(</span><em class="sig-param">kvs: Union[dict, list, str, int, float, bool, None], *, infer_missing=False</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.stocks.IntraDayStockPrice.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.stocks.IntraDayStockPrice.from_json">
+<em class="property">classmethod </em><code class="sig-name descname">from_json</code><span class="sig-paren">(</span><em class="sig-param">s: Union[str, bytes, bytearray], *, parse_float=None, parse_int=None, parse_constant=None, infer_missing=False, **kw</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.stocks.IntraDayStockPrice.from_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.IntraDayStockPrice.label">
+<code class="sig-name descname">label</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.IntraDayStockPrice.label" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.IntraDayStockPrice.market_average">
+<code class="sig-name descname">market_average</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.IntraDayStockPrice.market_average" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.IntraDayStockPrice.market_change_over_time">
+<code class="sig-name descname">market_change_over_time</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.IntraDayStockPrice.market_change_over_time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.IntraDayStockPrice.market_close">
+<code class="sig-name descname">market_close</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.IntraDayStockPrice.market_close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.IntraDayStockPrice.market_high">
+<code class="sig-name descname">market_high</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.IntraDayStockPrice.market_high" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.IntraDayStockPrice.market_low">
+<code class="sig-name descname">market_low</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.IntraDayStockPrice.market_low" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.IntraDayStockPrice.market_number_of_trades">
+<code class="sig-name descname">market_number_of_trades</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.IntraDayStockPrice.market_number_of_trades" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.IntraDayStockPrice.market_open">
+<code class="sig-name descname">market_open</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.IntraDayStockPrice.market_open" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.IntraDayStockPrice.market_volume">
+<code class="sig-name descname">market_volume</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.IntraDayStockPrice.market_volume" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.IntraDayStockPrice.minute">
+<code class="sig-name descname">minute</code><em class="property">: datetime.time</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.IntraDayStockPrice.minute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.stocks.IntraDayStockPrice.schema">
+<em class="property">classmethod </em><code class="sig-name descname">schema</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.stocks.IntraDayStockPrice.schema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.stocks.IntraDayStockPrice.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.stocks.IntraDayStockPrice.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.stocks.IntraDayStockPrice.to_json">
+<code class="sig-name descname">to_json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.stocks.IntraDayStockPrice.to_json" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

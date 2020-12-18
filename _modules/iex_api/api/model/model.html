@@ -175,7 +175,8 @@
            <div itemprop="articleBody">
             
   <h1>Source code for iex_api.api.model.model</h1><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
+<span></span><span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
 
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s2">&quot;today&quot;</span><span class="p">,</span>
@@ -197,14 +198,24 @@
     <span class="s2">&quot;q&quot;</span><span class="p">,</span>
     <span class="s2">&quot;y&quot;</span><span class="p">,</span>
     <span class="s2">&quot;IEXRange&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;TimeSeriesRequest&quot;</span><span class="p">,</span>
 <span class="p">]</span>
+
+<span class="kn">from</span> <span class="nn">iex_api.api.util</span> <span class="kn">import</span> <span class="n">convert_date_to_string</span>
 
 
 <div class="viewcode-block" id="IEXRange"><a class="viewcode-back" href="../../../../iex_api.api.model.html#iex_api.api.model.model.IEXRange">[docs]</a><span class="nd">@dataclass</span>
 <span class="k">class</span> <span class="nc">IEXRange</span><span class="p">:</span>
     <span class="n">value</span><span class="p">:</span> <span class="nb">str</span>
-    <span class="n">requires_calendar</span><span class="p">:</span> <span class="nb">bool</span></div>
+    <span class="n">requires_calendar</span><span class="p">:</span> <span class="nb">bool</span>
 
+<div class="viewcode-block" id="IEXRange.minute_intervals"><a class="viewcode-back" href="../../../../iex_api.api.model.html#iex_api.api.model.model.IEXRange.minute_intervals">[docs]</a>    <span class="k">def</span> <span class="nf">minute_intervals</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">IEXRange</span><span class="p">(</span>
+            <span class="n">value</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="si">}</span><span class="s2">m&quot;</span><span class="p">,</span> <span class="n">requires_calendar</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">requires_calendar</span>
+        <span class="p">)</span></div></div>
+
+
+<span class="nb">max</span> <span class="o">=</span> <span class="n">IEXRange</span><span class="p">(</span><span class="s2">&quot;max&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
 
 <span class="n">today</span> <span class="o">=</span> <span class="n">IEXRange</span><span class="p">(</span><span class="s2">&quot;today&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
 <span class="n">tomorrow</span> <span class="o">=</span> <span class="n">IEXRange</span><span class="p">(</span><span class="s2">&quot;tomorrow&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
@@ -221,24 +232,41 @@
 <span class="n">next_quarter</span> <span class="o">=</span> <span class="n">IEXRange</span><span class="p">(</span><span class="s2">&quot;next-quarter&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
 
 
+<span class="k">def</span> <span class="nf">date</span><span class="p">(</span><span class="n">date</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IEXRange</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">IEXRange</span><span class="p">(</span><span class="n">convert_date_to_string</span><span class="p">(</span><span class="n">date</span><span class="p">),</span> <span class="kc">False</span><span class="p">)</span>
+
+
 <div class="viewcode-block" id="d"><a class="viewcode-back" href="../../../../iex_api.api.model.html#iex_api.api.model.model.d">[docs]</a><span class="k">def</span> <span class="nf">d</span><span class="p">(</span><span class="n">amount</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IEXRange</span><span class="p">:</span>
-    <span class="k">return</span> <span class="n">IEXRange</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;d</span><span class="si">{</span><span class="n">amount</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span></div>
+    <span class="k">return</span> <span class="n">IEXRange</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">amount</span><span class="si">}</span><span class="s2">d&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="w"><a class="viewcode-back" href="../../../../iex_api.api.model.html#iex_api.api.model.model.w">[docs]</a><span class="k">def</span> <span class="nf">w</span><span class="p">(</span><span class="n">amount</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IEXRange</span><span class="p">:</span>
-    <span class="k">return</span> <span class="n">IEXRange</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;w</span><span class="si">{</span><span class="n">amount</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span></div>
+    <span class="k">return</span> <span class="n">IEXRange</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">amount</span><span class="si">}</span><span class="s2">w&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="m"><a class="viewcode-back" href="../../../../iex_api.api.model.html#iex_api.api.model.model.m">[docs]</a><span class="k">def</span> <span class="nf">m</span><span class="p">(</span><span class="n">amount</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IEXRange</span><span class="p">:</span>
-    <span class="k">return</span> <span class="n">IEXRange</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;m</span><span class="si">{</span><span class="n">amount</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span></div>
+    <span class="k">return</span> <span class="n">IEXRange</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">amount</span><span class="si">}</span><span class="s2">m&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="q"><a class="viewcode-back" href="../../../../iex_api.api.model.html#iex_api.api.model.model.q">[docs]</a><span class="k">def</span> <span class="nf">q</span><span class="p">(</span><span class="n">amount</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IEXRange</span><span class="p">:</span>
-    <span class="k">return</span> <span class="n">IEXRange</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;q</span><span class="si">{</span><span class="n">amount</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span></div>
+    <span class="k">return</span> <span class="n">IEXRange</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">amount</span><span class="si">}</span><span class="s2">q&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="y"><a class="viewcode-back" href="../../../../iex_api.api.model.html#iex_api.api.model.model.y">[docs]</a><span class="k">def</span> <span class="nf">y</span><span class="p">(</span><span class="n">amount</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">IEXRange</span><span class="p">:</span>
-    <span class="k">return</span> <span class="n">IEXRange</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;y</span><span class="si">{</span><span class="n">amount</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span></div>
+    <span class="k">return</span> <span class="n">IEXRange</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">amount</span><span class="si">}</span><span class="s2">y&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="TimeSeriesRequest"><a class="viewcode-back" href="../../../../iex_api.api.model.html#iex_api.api.model.model.TimeSeriesRequest">[docs]</a><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">TimeSeriesRequest</span><span class="p">:</span>
+    <span class="nb">range</span><span class="p">:</span> <span class="n">IEXRange</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">calendar</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">limit</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">date_field</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">from_date</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">to_date</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">on_date</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">last</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">first</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span></div>
 </pre></div>
 
            </div>

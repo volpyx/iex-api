@@ -1,0 +1,381 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>iex_api.model.company &mdash; iex-api 0.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> iex-api
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#stable-release">Stable release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation.html#from-sources">From sources</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">Package modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../iex_api.html">iex_api package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../iex_api.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../iex_api.api.html">iex_api.api package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../iex_api.model.html">iex_api.model package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../iex_api.html#module-iex_api">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing.html#get-started">Get Started!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing.html#deploying">Deploying</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">iex-api</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+          <li><a href="../../iex_api.html">iex_api</a> &raquo;</li>
+        
+      <li>iex_api.model.company</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for iex_api.model.company</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
+
+<span class="kn">from</span> <span class="nn">dataclasses_json</span> <span class="kn">import</span> <span class="n">dataclass_json</span><span class="p">,</span> <span class="n">LetterCase</span>
+
+<span class="kn">from</span> <span class="nn">iex_api.model.common</span> <span class="kn">import</span> <span class="n">SymbolMixin</span><span class="p">,</span> <span class="n">IEXTimeSeriesObject</span>
+
+
+<div class="viewcode-block" id="Financials"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.company.Financials">[docs]</a><span class="nd">@dataclass_json</span><span class="p">(</span><span class="n">letter_case</span><span class="o">=</span><span class="n">LetterCase</span><span class="o">.</span><span class="n">CAMEL</span><span class="p">)</span>
+<span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">Financials</span><span class="p">(</span><span class="n">IEXTimeSeriesObject</span><span class="p">):</span>
+    <span class="n">EBITDA</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">accounts_payable</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">capital_surplus</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">cash_change</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">cash_flow</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">cash_flow_financing</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">changes_in_inventories</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">changes_in_receivables</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">common_stock</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">cost_of_revenue</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">currency</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">current_assets</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">current_cash</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">current_debt</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">current_long_term_debt</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">depreciation</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">dividends_paid</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">ebit</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">exchange_rate_effect</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">fiscal_date</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span>
+    <span class="n">goodwill</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">gross_profit</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">income_tax</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">intangible_assets</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">interest_income</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">inventory</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">investing_activity_other</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">investments</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">longTerm_debt</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">longTerm_investments</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">minority_interest</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">net_borrowings</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">net_income</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">net_income_basic</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">net_tangible_assets</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">operating_expense</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">operating_income</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">operating_revenue</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">other_assets</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">other_current_assets</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">other_current_liabilities</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">other_income_expense_net</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">other_liabilities</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">pretax_income</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">property_plant_equipment</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">receivables</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">report_date</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span>
+    <span class="n">research_and_development</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">retained_earnings</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">revenue</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">selling_general_and_admin</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">shareholder_equity</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">shortTerm_debt</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">shortTerm_investments</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">symbol</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">total_assets</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">total_cash</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">total_debt</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">total_investing_cash_flows</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">total_liabilities</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">total_revenue</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">treasury_stock</span><span class="p">:</span> <span class="nb">int</span>
+
+    <span class="n">ID</span> <span class="o">=</span> <span class="s2">&quot;FINANCIALS&quot;</span></div>
+
+
+<div class="viewcode-block" id="CashFlow"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.company.CashFlow">[docs]</a><span class="nd">@dataclass_json</span><span class="p">(</span><span class="n">letter_case</span><span class="o">=</span><span class="n">LetterCase</span><span class="o">.</span><span class="n">CAMEL</span><span class="p">)</span>
+<span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">CashFlow</span><span class="p">(</span><span class="n">IEXTimeSeriesObject</span><span class="p">):</span>
+    <span class="n">capital_expenditures</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">cash_change</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">cash_flow</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">cash_flow_financing</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">changes_in_inventories</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">changes_in_receivables</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">currency</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">depreciation</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">dividends_paid</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">exchange_rate_effect</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">fiscal_date</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span>
+    <span class="n">investing_activity_other</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">investments</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">net_borrowings</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">net_income</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">other_financing_cash_flows</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">report_date</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span>
+    <span class="n">symbol</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">total_investing_cash_flows</span><span class="p">:</span> <span class="nb">int</span>
+
+    <span class="n">ID</span> <span class="o">=</span> <span class="s2">&quot;CASH_FLOW&quot;</span></div>
+
+
+<div class="viewcode-block" id="Income"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.company.Income">[docs]</a><span class="nd">@dataclass_json</span><span class="p">(</span><span class="n">letter_case</span><span class="o">=</span><span class="n">LetterCase</span><span class="o">.</span><span class="n">CAMEL</span><span class="p">)</span>
+<span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">Income</span><span class="p">(</span><span class="n">IEXTimeSeriesObject</span><span class="p">):</span>
+    <span class="n">report_date</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span>
+    <span class="n">fiscal_date</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span>
+    <span class="n">currency</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">total_revenue</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">cost_of_revenue</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">gross_profit</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">research_and_development</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">selling_general_and_admin</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">operating_expense</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">operating_income</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">other_income_expense_net</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">ebit</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">interest_income</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">pretax_income</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">income_tax</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">minority_interest</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">net_income</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">net_incomeBasic</span><span class="p">:</span> <span class="nb">int</span>
+
+    <span class="n">ID</span> <span class="o">=</span> <span class="s2">&quot;INCOME&quot;</span></div>
+
+
+<div class="viewcode-block" id="Company"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.company.Company">[docs]</a><span class="nd">@dataclass_json</span><span class="p">(</span><span class="n">letter_case</span><span class="o">=</span><span class="n">LetterCase</span><span class="o">.</span><span class="n">CAMEL</span><span class="p">)</span>
+<span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">Company</span><span class="p">(</span><span class="n">SymbolMixin</span><span class="p">):</span>
+    <span class="n">company_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">exchange</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">industry</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">website</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">description</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">CEO</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">security_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">issue_type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">sector</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">primary_sic_code</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">employees</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">tags</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">address</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">address2</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">state</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">city</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="nb">zip</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">country</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">phone</span><span class="p">:</span> <span class="nb">str</span>
+
+<div class="viewcode-block" id="Company.from_symbol"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.company.Company.from_symbol">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_symbol</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">symbol</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">api</span><span class="p">()</span><span class="o">.</span><span class="n">perform_request</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;/stock/</span><span class="si">{</span><span class="n">symbol</span><span class="si">}</span><span class="s2">/company&quot;</span><span class="p">,</span> <span class="n">Company</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Volpyx
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

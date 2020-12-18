@@ -227,6 +227,11 @@
 <dt id="iex_api.api.model.model.IEXRange">
 <em class="property">class </em><code class="sig-prename descclassname">iex_api.api.model.model.</code><code class="sig-name descname">IEXRange</code><span class="sig-paren">(</span><em class="sig-param">value: str</em>, <em class="sig-param">requires_calendar: bool</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/api/model/model.html#IEXRange"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.api.model.model.IEXRange" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="iex_api.api.model.model.IEXRange.minute_intervals">
+<code class="sig-name descname">minute_intervals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/api/model/model.html#IEXRange.minute_intervals"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.api.model.model.IEXRange.minute_intervals" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="attribute">
 <dt id="iex_api.api.model.model.IEXRange.requires_calendar">
 <code class="sig-name descname">requires_calendar</code><em class="property">: bool</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.api.model.model.IEXRange.requires_calendar" title="Permalink to this definition">¶</a></dt>
@@ -235,6 +240,57 @@
 <dl class="attribute">
 <dt id="iex_api.api.model.model.IEXRange.value">
 <code class="sig-name descname">value</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.api.model.model.IEXRange.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="iex_api.api.model.model.TimeSeriesRequest">
+<em class="property">class </em><code class="sig-prename descclassname">iex_api.api.model.model.</code><code class="sig-name descname">TimeSeriesRequest</code><span class="sig-paren">(</span><em class="sig-param">range: iex_api.api.model.model.IEXRange = None</em>, <em class="sig-param">calendar: bool = None</em>, <em class="sig-param">limit: int = 1</em>, <em class="sig-param">date_field: datetime.date = None</em>, <em class="sig-param">from_date: datetime.date = None</em>, <em class="sig-param">to_date: datetime.date = None</em>, <em class="sig-param">on_date: datetime.date = None</em>, <em class="sig-param">last: int = None</em>, <em class="sig-param">first: int = None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/api/model/model.html#TimeSeriesRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.api.model.model.TimeSeriesRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="iex_api.api.model.model.TimeSeriesRequest.calendar">
+<code class="sig-name descname">calendar</code><em class="property">: bool</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.api.model.model.TimeSeriesRequest.calendar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.api.model.model.TimeSeriesRequest.date_field">
+<code class="sig-name descname">date_field</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.api.model.model.TimeSeriesRequest.date_field" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.api.model.model.TimeSeriesRequest.first">
+<code class="sig-name descname">first</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.api.model.model.TimeSeriesRequest.first" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.api.model.model.TimeSeriesRequest.from_date">
+<code class="sig-name descname">from_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.api.model.model.TimeSeriesRequest.from_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.api.model.model.TimeSeriesRequest.last">
+<code class="sig-name descname">last</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.api.model.model.TimeSeriesRequest.last" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.api.model.model.TimeSeriesRequest.limit">
+<code class="sig-name descname">limit</code><em class="property">: int</em><em class="property"> = 1</em><a class="headerlink" href="#iex_api.api.model.model.TimeSeriesRequest.limit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.api.model.model.TimeSeriesRequest.on_date">
+<code class="sig-name descname">on_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.api.model.model.TimeSeriesRequest.on_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.api.model.model.TimeSeriesRequest.range">
+<code class="sig-name descname">range</code><em class="property">: iex_api.api.model.model.IEXRange</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.api.model.model.TimeSeriesRequest.range" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.api.model.model.TimeSeriesRequest.to_date">
+<code class="sig-name descname">to_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.api.model.model.TimeSeriesRequest.to_date" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

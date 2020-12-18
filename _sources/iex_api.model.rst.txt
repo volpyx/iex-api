@@ -4,10 +4,42 @@ iex\_api.model package
 Submodules
 ----------
 
+iex\_api.model.ca module
+------------------------
+
+.. automodule:: iex_api.model.ca
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 iex\_api.model.common module
 ----------------------------
 
 .. automodule:: iex_api.model.common
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+iex\_api.model.company module
+-----------------------------
+
+.. automodule:: iex_api.model.company
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+iex\_api.model.options module
+-----------------------------
+
+.. automodule:: iex_api.model.options
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+iex\_api.model.stocks module
+----------------------------
+
+.. automodule:: iex_api.model.stocks
    :members:
    :undoc-members:
    :show-inheritance:
