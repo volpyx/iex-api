@@ -73,10 +73,10 @@ class Symbol(IEXBaseMixin):
     name: str
     date: datetime.date
     type: str
-    iexId: str
+    iex_id: str
     region: str
     currency: str
-    isEnabled: bool
+    is_enabled: bool
 
     @classmethod
     def get_all_symbols_for_region(cls, region: str) -> List["Symbol"]:
