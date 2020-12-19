@@ -1,19 +1,20 @@
 import os
-import requests
+import aiohttp
 import datetime
 
 from dataclasses import dataclass
 
-from requests import Response
-from requests.adapters import HTTPAdapter, Retry
-from typing import TypeVar, Generic, List
+from typing import TypeVar, Generic, List, Union
+
+from aiohttp import ClientResponse
+from tenacity import retry, stop_after_attempt
 
 from iex_api.api.model.model import IEXRange, TimeSeriesRequest
 from iex_api.api.util import convert_date_to_string
 
 
-def _extract_messages_used(response: Response) -> int:
-    return int(response.headers.get("iexcloud-messages-used", 0))
+def _extract_messages_used(response: ClientResponse) -> int:
+    return int(response.headers.get("iexcloud-messages-used", "0"))
 
 
 T = TypeVar("T")
@@ -41,6 +42,12 @@ class IEXApi:
         self.configuration = configuration
         self._messages_used = 0
 
+        self.perform_request = retry(
+            self.perform_request,
+            mulitplier=configuration.backoff_factor,
+            stop=stop_after_attempt(configuration.retry_count),
+        )
+
     @property
     def message_count(self):
         return self._messages_used
@@ -49,7 +56,7 @@ class IEXApi:
     def from_env(cls):
         return cls(IEXApiConfiguration.from_env())
 
-    def chart(
+    async def chart(
         self,
         symbol: str,
         range: IEXRange,
@@ -87,9 +94,11 @@ class IEXApi:
         if include_today is not None:
             params["includeToday"] = include_today
 
-        return self.perform_request(f"/stock/{symbol}/chart/{range.value}", cls, params)
+        return await self.perform_request(
+            f"/stock/{symbol}/chart/{range.value}", cls, params
+        )
 
-    def perform_time_series_request(
+    async def perform_time_series_request(
         self,
         id: str,
         key: str,
@@ -124,24 +133,11 @@ class IEXApi:
         path = f"/time-series/{id}/{key}"
         if sub_key is not None:
             path = f"{path}/{sub_key}"
-        return self.perform_request(path, cls, params)
+        return await self.perform_request(path, cls, params)
 
-    def session(self) -> requests.Session:
-        session = requests.Session()
-        session.mount(
-            "https://",
-            HTTPAdapter(
-                max_retries=Retry(
-                    total=self.configuration.retry_count,
-                    backoff_factor=self.configuration.backoff_factor,
-                    status_forcelist=[429, 500],
-                    method_whitelist=False,
-                )
-            ),
-        )
-        return session
-
-    def perform_request(self, path: str, cls: Generic[T], parameters: dict = None) -> T:
+    async def perform_request(
+        self, path: str, cls: Generic[T], parameters: dict = None
+    ) -> T:
         if parameters is None:
             parameters = {}
         if not path.startswith("/"):
@@ -149,17 +145,25 @@ class IEXApi:
 
         params = dict(parameters, token=self.configuration.api_token)
         url = self.configuration.api_url + path
-        response = self.session().get(url, params=params)
-        print(url)
-        response.raise_for_status()
 
-        self._messages_used = self._messages_used + _extract_messages_used(response)
+        if url.endswith("/"):
+            url = url[: len(url) - 1]
 
-        data = response.json()
-        if isinstance(data, list):
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url, params=params) as response:
+                self._messages_used = self._messages_used + _extract_messages_used(
+                    response
+                )
 
-            def from_dict(source: dict):
-                return cls.from_dict(source, infer_missing=True)
+                response.raise_for_status()
+                data = await response.json()
 
-            return map(from_dict, data)
-        return cls.from_dict(data, infer_missing=True)
+                if isinstance(data, list):
+
+                    def parse(source: Union[dict, str]):
+                        if isinstance(source, str):
+                            return source
+                        return cls.from_dict(source, infer_missing=True)
+
+                    return map(parse, data)
+                return cls.from_dict(data, infer_missing=True)

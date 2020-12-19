@@ -1,3 +1,4 @@
+import asyncio
 import datetime
 from dataclasses import dataclass
 from typing import Iterable
@@ -41,11 +42,17 @@ class EndOfDayOptions(IEXTimeSeriesObject):
     volume: int
 
     @classmethod
-    def latest(cls, symbol: str, *args, **kwargs) -> Iterable["EndOfDayOptions"]:
+    async def latest(cls, symbol: str, *args, **kwargs) -> Iterable["EndOfDayOptions"]:
         if "n" in kwargs and kwargs["n"] != 1:
             raise ValueError("Latest end of day options only supports n=1")
-        expiry_dates = cls.api().perform_request(f"/stock/{symbol}/options/", str)
-        return chain(
-            cls.api().perform_request(f"/stock/{symbol}/options/{expiry_date}")
-            for expiry_date in expiry_dates
+        expiry_dates = await cls.api().perform_request(f"/stock/{symbol}/options/", str)
+        return await asyncio.gather(
+            *chain(
+                asyncio.ensure_future(
+                    cls.api().perform_request(
+                        f"/stock/{symbol}/options/{expiry_date}", EndOfDayOptions
+                    )
+                )
+                for expiry_date in expiry_dates
+            )
         )
