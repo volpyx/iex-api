@@ -38,14 +38,15 @@ class IEXTimeSeriesObject(IEXBaseMixin):
     async def latest(
         cls, key: str, sub_key: str = None, n: int = 1, output_constructor=list
     ):
-        return (
-            await cls.series(
-                key,
-                sub_key,
-                TimeSeriesRequest(last=n),
-                output_constructor=output_constructor,
-            )
-        )[0]
+        data = await cls.series(
+            key,
+            sub_key,
+            TimeSeriesRequest(last=n),
+            output_constructor=output_constructor,
+        )
+        if n == 1:
+            return data[0]
+        return data
 
     @classmethod
     async def series(
