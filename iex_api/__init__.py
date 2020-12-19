@@ -6,7 +6,7 @@ __author__ = "Volpyx"
 __email__ = "thomas.kluiters@gmail.com"
 # Do not edit this string manually, always use bumpversion
 # Details in CONTRIBUTING.md
-__version__ = "0.0.3"
+__version__ = "0.0.4"
 
 
 def get_module_version():
