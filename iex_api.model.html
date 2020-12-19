@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>iex_api.model package &mdash; iex-api 0.0.4 documentation</title>
+  <title>iex_api.model package &mdash; iex-api 0.0.5 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                0.0.4
+                0.0.5
               </div>
             
           
@@ -743,6 +743,152 @@
 </div>
 <div class="section" id="module-iex_api.model.company">
 <span id="iex-api-model-company-module"></span><h2>iex_api.model.company module<a class="headerlink" href="#module-iex_api.model.company" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="iex_api.model.company.AdvancedStats">
+<em class="property">class </em><code class="sig-prename descclassname">iex_api.model.company.</code><code class="sig-name descname">AdvancedStats</code><span class="sig-paren">(</span><em class="sig-param">company_name: str</em>, <em class="sig-param">marketcap: int</em>, <em class="sig-param">week52high: float</em>, <em class="sig-param">week52low: float</em>, <em class="sig-param">week52change: float</em>, <em class="sig-param">shares_outstanding: float</em>, <em class="sig-param">avg10_volume: int</em>, <em class="sig-param">avg30_volume: int</em>, <em class="sig-param">day200_moving_avg: int</em>, <em class="sig-param">day50_moving_avg: int</em>, <em class="sig-param">employees: int</em>, <em class="sig-param">ttmEPS: float</em>, <em class="sig-param">ttm_dividend_rate: float</em>, <em class="sig-param">dividend_yield: float</em>, <em class="sig-param">next_dividend_date: datetime.date</em>, <em class="sig-param">ex_dividend_date: datetime.date</em>, <em class="sig-param">next_earnings_date: datetime.date</em>, <em class="sig-param">pe_ratio: float</em>, <em class="sig-param">beta: float</em>, <em class="sig-param">max_change_percent: float</em>, <em class="sig-param">year5_change_percent: float</em>, <em class="sig-param">year2_change_percent: float</em>, <em class="sig-param">year1_change_percent: float</em>, <em class="sig-param">ytd_change_percent: float</em>, <em class="sig-param">month6_change_percent: float</em>, <em class="sig-param">month3_change_percent: float</em>, <em class="sig-param">month1_change_percent: float</em>, <em class="sig-param">day30Change_percent: float</em>, <em class="sig-param">day5Change_percent: float</em>, <em class="sig-param">total_cash: int</em>, <em class="sig-param">current_debt: int</em>, <em class="sig-param">revenue: int</em>, <em class="sig-param">gross_profit: int</em>, <em class="sig-param">total_revenue: int</em>, <em class="sig-param">EBITDA: int</em>, <em class="sig-param">revenue_per_share: float</em>, <em class="sig-param">revenue_per_employee: float</em>, <em class="sig-param">debt_to_equity: float</em>, <em class="sig-param">profit_margin: float</em>, <em class="sig-param">enterprise_value: int</em>, <em class="sig-param">enterprise_value_to_revenue: float</em>, <em class="sig-param">price_to_sales: float</em>, <em class="sig-param">price_to_book: float</em>, <em class="sig-param">forward_PERatio: float</em>, <em class="sig-param">peg_patio: float</em>, <em class="sig-param">pe_high: float</em>, <em class="sig-param">pe_low: float</em>, <em class="sig-param">week52high_date: datetime.date</em>, <em class="sig-param">week52low_date: datetime.date</em>, <em class="sig-param">put_call_ratio: float</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/company.html#AdvancedStats"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.company.AdvancedStats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#iex_api.model.company.KeyStats" title="iex_api.model.company.KeyStats"><code class="xref py py-class docutils literal notranslate"><span class="pre">iex_api.model.company.KeyStats</span></code></a></p>
+<dl class="attribute">
+<dt id="iex_api.model.company.AdvancedStats.EBITDA">
+<code class="sig-name descname">EBITDA</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.AdvancedStats.EBITDA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.AdvancedStats.current_debt">
+<code class="sig-name descname">current_debt</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.AdvancedStats.current_debt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.AdvancedStats.dataclass_json_config">
+<code class="sig-name descname">dataclass_json_config</code><em class="property"> = {'letter_case': &lt;function camelcase&gt;}</em><a class="headerlink" href="#iex_api.model.company.AdvancedStats.dataclass_json_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.AdvancedStats.debt_to_equity">
+<code class="sig-name descname">debt_to_equity</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.AdvancedStats.debt_to_equity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.AdvancedStats.enterprise_value">
+<code class="sig-name descname">enterprise_value</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.AdvancedStats.enterprise_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.AdvancedStats.enterprise_value_to_revenue">
+<code class="sig-name descname">enterprise_value_to_revenue</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.AdvancedStats.enterprise_value_to_revenue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.AdvancedStats.forward_PERatio">
+<code class="sig-name descname">forward_PERatio</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.AdvancedStats.forward_PERatio" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.AdvancedStats.from_dict">
+<em class="property">classmethod </em><code class="sig-name descname">from_dict</code><span class="sig-paren">(</span><em class="sig-param">kvs: Union[dict, list, str, int, float, bool, None], *, infer_missing=False</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.company.AdvancedStats.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.AdvancedStats.from_json">
+<em class="property">classmethod </em><code class="sig-name descname">from_json</code><span class="sig-paren">(</span><em class="sig-param">s: Union[str, bytes, bytearray], *, parse_float=None, parse_int=None, parse_constant=None, infer_missing=False, **kw</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.company.AdvancedStats.from_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.AdvancedStats.from_symbol">
+<em class="property">async classmethod </em><code class="sig-name descname">from_symbol</code><span class="sig-paren">(</span><em class="sig-param">symbol: str</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/company.html#AdvancedStats.from_symbol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.company.AdvancedStats.from_symbol" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.AdvancedStats.gross_profit">
+<code class="sig-name descname">gross_profit</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.AdvancedStats.gross_profit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.AdvancedStats.pe_high">
+<code class="sig-name descname">pe_high</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.AdvancedStats.pe_high" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.AdvancedStats.pe_low">
+<code class="sig-name descname">pe_low</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.AdvancedStats.pe_low" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.AdvancedStats.peg_patio">
+<code class="sig-name descname">peg_patio</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.AdvancedStats.peg_patio" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.AdvancedStats.price_to_book">
+<code class="sig-name descname">price_to_book</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.AdvancedStats.price_to_book" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.AdvancedStats.price_to_sales">
+<code class="sig-name descname">price_to_sales</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.AdvancedStats.price_to_sales" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.AdvancedStats.profit_margin">
+<code class="sig-name descname">profit_margin</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.AdvancedStats.profit_margin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.AdvancedStats.put_call_ratio">
+<code class="sig-name descname">put_call_ratio</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.AdvancedStats.put_call_ratio" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.AdvancedStats.revenue">
+<code class="sig-name descname">revenue</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.AdvancedStats.revenue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.AdvancedStats.revenue_per_employee">
+<code class="sig-name descname">revenue_per_employee</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.AdvancedStats.revenue_per_employee" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.AdvancedStats.revenue_per_share">
+<code class="sig-name descname">revenue_per_share</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.AdvancedStats.revenue_per_share" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.AdvancedStats.schema">
+<em class="property">classmethod </em><code class="sig-name descname">schema</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.company.AdvancedStats.schema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.AdvancedStats.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.company.AdvancedStats.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.AdvancedStats.to_json">
+<code class="sig-name descname">to_json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.company.AdvancedStats.to_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.AdvancedStats.total_cash">
+<code class="sig-name descname">total_cash</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.AdvancedStats.total_cash" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.AdvancedStats.total_revenue">
+<code class="sig-name descname">total_revenue</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.AdvancedStats.total_revenue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.AdvancedStats.week52high_date">
+<code class="sig-name descname">week52high_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.AdvancedStats.week52high_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.AdvancedStats.week52low_date">
+<code class="sig-name descname">week52low_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.AdvancedStats.week52low_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <dl class="class">
 <dt id="iex_api.model.company.CashFlow">
 <em class="property">class </em><code class="sig-prename descclassname">iex_api.model.company.</code><code class="sig-name descname">CashFlow</code><span class="sig-paren">(</span><em class="sig-param">id: str, key: str, source: Optional[str], sub_key: Optional[str], date: Optional[datetime.date], updated: Optional[datetime.date], capital_expenditures: int, cash_change: int, cash_flow: int, cash_flow_financing: int, changes_in_inventories: int, changes_in_receivables: int, currency: str, depreciation: int, dividends_paid: int, exchange_rate_effect: int, fiscal_date: datetime.date, investing_activity_other: int, investments: int, net_borrowings: int, net_income: int, other_financing_cash_flows: int, report_date: datetime.date, symbol: str, total_investing_cash_flows: int</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/company.html#CashFlow"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.company.CashFlow" title="Permalink to this definition">¶</a></dt>
@@ -1493,6 +1639,192 @@
 <dl class="attribute">
 <dt id="iex_api.model.company.Income.total_revenue">
 <code class="sig-name descname">total_revenue</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Income.total_revenue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="iex_api.model.company.KeyStats">
+<em class="property">class </em><code class="sig-prename descclassname">iex_api.model.company.</code><code class="sig-name descname">KeyStats</code><span class="sig-paren">(</span><em class="sig-param">company_name: str</em>, <em class="sig-param">marketcap: int</em>, <em class="sig-param">week52high: float</em>, <em class="sig-param">week52low: float</em>, <em class="sig-param">week52change: float</em>, <em class="sig-param">shares_outstanding: float</em>, <em class="sig-param">avg10_volume: int</em>, <em class="sig-param">avg30_volume: int</em>, <em class="sig-param">day200_moving_avg: int</em>, <em class="sig-param">day50_moving_avg: int</em>, <em class="sig-param">employees: int</em>, <em class="sig-param">ttmEPS: float</em>, <em class="sig-param">ttm_dividend_rate: float</em>, <em class="sig-param">dividend_yield: float</em>, <em class="sig-param">next_dividend_date: datetime.date</em>, <em class="sig-param">ex_dividend_date: datetime.date</em>, <em class="sig-param">next_earnings_date: datetime.date</em>, <em class="sig-param">pe_ratio: float</em>, <em class="sig-param">beta: float</em>, <em class="sig-param">max_change_percent: float</em>, <em class="sig-param">year5_change_percent: float</em>, <em class="sig-param">year2_change_percent: float</em>, <em class="sig-param">year1_change_percent: float</em>, <em class="sig-param">ytd_change_percent: float</em>, <em class="sig-param">month6_change_percent: float</em>, <em class="sig-param">month3_change_percent: float</em>, <em class="sig-param">month1_change_percent: float</em>, <em class="sig-param">day30Change_percent: float</em>, <em class="sig-param">day5Change_percent: float</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/company.html#KeyStats"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.company.KeyStats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#iex_api.model.common.IEXBaseMixin" title="iex_api.model.common.IEXBaseMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">iex_api.model.common.IEXBaseMixin</span></code></a></p>
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.avg10_volume">
+<code class="sig-name descname">avg10_volume</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.avg10_volume" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.avg30_volume">
+<code class="sig-name descname">avg30_volume</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.avg30_volume" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.beta">
+<code class="sig-name descname">beta</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.beta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.company_name">
+<code class="sig-name descname">company_name</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.company_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.dataclass_json_config">
+<code class="sig-name descname">dataclass_json_config</code><em class="property"> = {'letter_case': &lt;function camelcase&gt;}</em><a class="headerlink" href="#iex_api.model.company.KeyStats.dataclass_json_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.day200_moving_avg">
+<code class="sig-name descname">day200_moving_avg</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.day200_moving_avg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.day30Change_percent">
+<code class="sig-name descname">day30Change_percent</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.day30Change_percent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.day50_moving_avg">
+<code class="sig-name descname">day50_moving_avg</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.day50_moving_avg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.day5Change_percent">
+<code class="sig-name descname">day5Change_percent</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.day5Change_percent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.dividend_yield">
+<code class="sig-name descname">dividend_yield</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.dividend_yield" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.employees">
+<code class="sig-name descname">employees</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.employees" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.ex_dividend_date">
+<code class="sig-name descname">ex_dividend_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.ex_dividend_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.KeyStats.from_dict">
+<em class="property">classmethod </em><code class="sig-name descname">from_dict</code><span class="sig-paren">(</span><em class="sig-param">kvs: Union[dict, list, str, int, float, bool, None], *, infer_missing=False</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.company.KeyStats.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.KeyStats.from_json">
+<em class="property">classmethod </em><code class="sig-name descname">from_json</code><span class="sig-paren">(</span><em class="sig-param">s: Union[str, bytes, bytearray], *, parse_float=None, parse_int=None, parse_constant=None, infer_missing=False, **kw</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.company.KeyStats.from_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.KeyStats.from_symbol">
+<em class="property">async classmethod </em><code class="sig-name descname">from_symbol</code><span class="sig-paren">(</span><em class="sig-param">symbol: str</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/company.html#KeyStats.from_symbol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.company.KeyStats.from_symbol" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.marketcap">
+<code class="sig-name descname">marketcap</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.marketcap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.max_change_percent">
+<code class="sig-name descname">max_change_percent</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.max_change_percent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.month1_change_percent">
+<code class="sig-name descname">month1_change_percent</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.month1_change_percent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.month3_change_percent">
+<code class="sig-name descname">month3_change_percent</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.month3_change_percent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.month6_change_percent">
+<code class="sig-name descname">month6_change_percent</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.month6_change_percent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.next_dividend_date">
+<code class="sig-name descname">next_dividend_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.next_dividend_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.next_earnings_date">
+<code class="sig-name descname">next_earnings_date</code><em class="property">: datetime.date</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.next_earnings_date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.pe_ratio">
+<code class="sig-name descname">pe_ratio</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.pe_ratio" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.KeyStats.schema">
+<em class="property">classmethod </em><code class="sig-name descname">schema</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.company.KeyStats.schema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.shares_outstanding">
+<code class="sig-name descname">shares_outstanding</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.shares_outstanding" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.KeyStats.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.company.KeyStats.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iex_api.model.company.KeyStats.to_json">
+<code class="sig-name descname">to_json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.company.KeyStats.to_json" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.ttmEPS">
+<code class="sig-name descname">ttmEPS</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.ttmEPS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.ttm_dividend_rate">
+<code class="sig-name descname">ttm_dividend_rate</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.ttm_dividend_rate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.week52change">
+<code class="sig-name descname">week52change</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.week52change" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.week52high">
+<code class="sig-name descname">week52high</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.week52high" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.week52low">
+<code class="sig-name descname">week52low</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.week52low" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.year1_change_percent">
+<code class="sig-name descname">year1_change_percent</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.year1_change_percent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.year2_change_percent">
+<code class="sig-name descname">year2_change_percent</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.year2_change_percent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.year5_change_percent">
+<code class="sig-name descname">year5_change_percent</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.year5_change_percent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.ytd_change_percent">
+<code class="sig-name descname">ytd_change_percent</code><em class="property">: float</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.ytd_change_percent" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

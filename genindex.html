@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Index &mdash; iex-api 0.0.4 documentation</title>
+  <title>Index &mdash; iex-api 0.0.5 documentation</title>
   
 
   
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                0.0.4
+                0.0.5
               </div>
             
           
@@ -216,16 +216,18 @@
 </li>
       <li><a href="iex_api.model.html#iex_api.model.ca.AdvancedDividend">AdvancedDividend (class in iex_api.model.ca)</a>
 </li>
+      <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats">AdvancedStats (class in iex_api.model.company)</a>
+</li>
       <li><a href="iex_api.model.html#iex_api.model.common.IEXTimeSeriesObject.all">all() (iex_api.model.common.IEXTimeSeriesObject class method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="iex_api.model.html#iex_api.model.ca.AdvancedDividend.amount">amount (iex_api.model.ca.AdvancedDividend attribute)</a>
 
       <ul>
         <li><a href="iex_api.model.html#iex_api.model.ca.BasicDividend.amount">(iex_api.model.ca.BasicDividend attribute)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="iex_api.model.html#iex_api.model.ca.AdvancedDividend.announce_date">announce_date (iex_api.model.ca.AdvancedDividend attribute)</a>
 </li>
       <li><a href="iex_api.model.html#iex_api.model.common.IEXBaseMixin.api">api() (iex_api.model.common.IEXBaseMixin class method)</a>
@@ -236,6 +238,10 @@
 </li>
       <li><a href="iex_api.model.html#iex_api.model.options.EndOfDayOptions.ask">ask (iex_api.model.options.EndOfDayOptions attribute)</a>
 </li>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.avg10_volume">avg10_volume (iex_api.model.company.KeyStats attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.avg30_volume">avg30_volume (iex_api.model.company.KeyStats attribute)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -244,9 +250,11 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="iex_api.api.html#iex_api.api.api.IEXApiConfiguration.backoff_factor">backoff_factor (iex_api.api.api.IEXApiConfiguration attribute)</a>
 </li>
+      <li><a href="iex_api.model.html#iex_api.model.ca.BasicDividend">BasicDividend (class in iex_api.model.ca)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="iex_api.model.html#iex_api.model.ca.BasicDividend">BasicDividend (class in iex_api.model.ca)</a>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.beta">beta (iex_api.model.company.KeyStats attribute)</a>
 </li>
       <li><a href="iex_api.model.html#iex_api.model.options.EndOfDayOptions.bid">bid (iex_api.model.options.EndOfDayOptions attribute)</a>
 </li>
@@ -318,16 +326,20 @@
         <li><a href="iex_api.model.html#iex_api.model.stocks.HistoricalStockPrice.close">(iex_api.model.stocks.HistoricalStockPrice attribute)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="iex_api.model.html#iex_api.model.options.EndOfDayOptions.closing_price">closing_price (iex_api.model.options.EndOfDayOptions attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="iex_api.model.html#iex_api.model.company.Financials.common_stock">common_stock (iex_api.model.company.Financials attribute)</a>
 </li>
       <li><a href="iex_api.model.html#iex_api.model.company.Company">Company (class in iex_api.model.company)</a>
 </li>
       <li><a href="iex_api.model.html#iex_api.model.company.Company.company_name">company_name (iex_api.model.company.Company attribute)</a>
+
+      <ul>
+        <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.company_name">(iex_api.model.company.KeyStats attribute)</a>
 </li>
+      </ul></li>
       <li><a href="iex_api.model.html#iex_api.model.options.EndOfDayOptions.contract_description">contract_description (iex_api.model.options.EndOfDayOptions attribute)</a>
 </li>
       <li><a href="iex_api.model.html#iex_api.model.options.EndOfDayOptions.contract_name">contract_name (iex_api.model.options.EndOfDayOptions attribute)</a>
@@ -370,8 +382,12 @@
 </li>
       <li><a href="iex_api.model.html#iex_api.model.company.Financials.current_cash">current_cash (iex_api.model.company.Financials attribute)</a>
 </li>
-      <li><a href="iex_api.model.html#iex_api.model.company.Financials.current_debt">current_debt (iex_api.model.company.Financials attribute)</a>
+      <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.current_debt">current_debt (iex_api.model.company.AdvancedStats attribute)</a>
+
+      <ul>
+        <li><a href="iex_api.model.html#iex_api.model.company.Financials.current_debt">(iex_api.model.company.Financials attribute)</a>
 </li>
+      </ul></li>
       <li><a href="iex_api.model.html#iex_api.model.company.Financials.current_long_term_debt">current_long_term_debt (iex_api.model.company.Financials attribute)</a>
 </li>
   </ul></td>
@@ -391,6 +407,8 @@
 </li>
         <li><a href="iex_api.model.html#iex_api.model.common.Symbol.dataclass_json_config">(iex_api.model.common.Symbol attribute)</a>
 </li>
+        <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.dataclass_json_config">(iex_api.model.company.AdvancedStats attribute)</a>
+</li>
         <li><a href="iex_api.model.html#iex_api.model.company.CashFlow.dataclass_json_config">(iex_api.model.company.CashFlow attribute)</a>
 </li>
         <li><a href="iex_api.model.html#iex_api.model.company.Company.dataclass_json_config">(iex_api.model.company.Company attribute)</a>
@@ -398,6 +416,8 @@
         <li><a href="iex_api.model.html#iex_api.model.company.Financials.dataclass_json_config">(iex_api.model.company.Financials attribute)</a>
 </li>
         <li><a href="iex_api.model.html#iex_api.model.company.Income.dataclass_json_config">(iex_api.model.company.Income attribute)</a>
+</li>
+        <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.dataclass_json_config">(iex_api.model.company.KeyStats attribute)</a>
 </li>
         <li><a href="iex_api.model.html#iex_api.model.options.EndOfDayOptions.dataclass_json_config">(iex_api.model.options.EndOfDayOptions attribute)</a>
 </li>
@@ -417,6 +437,16 @@
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="iex_api.api.model.html#iex_api.api.model.model.TimeSeriesRequest.date_field">date_field (iex_api.api.model.model.TimeSeriesRequest attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.day200_moving_avg">day200_moving_avg (iex_api.model.company.KeyStats attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.day30Change_percent">day30Change_percent (iex_api.model.company.KeyStats attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.day50_moving_avg">day50_moving_avg (iex_api.model.company.KeyStats attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.day5Change_percent">day5Change_percent (iex_api.model.company.KeyStats attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.debt_to_equity">debt_to_equity (iex_api.model.company.AdvancedStats attribute)</a>
 </li>
       <li><a href="iex_api.model.html#iex_api.model.ca.AdvancedDividend.declared_currency_CD">declared_currency_CD (iex_api.model.ca.AdvancedDividend attribute)</a>
 </li>
@@ -442,6 +472,8 @@
         <li><a href="iex_api.model.html#iex_api.model.company.Company.description">(iex_api.model.company.Company attribute)</a>
 </li>
       </ul></li>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.dividend_yield">dividend_yield (iex_api.model.company.KeyStats attribute)</a>
+</li>
       <li><a href="iex_api.model.html#iex_api.model.company.CashFlow.dividends_paid">dividends_paid (iex_api.model.company.CashFlow attribute)</a>
 
       <ul>
@@ -460,11 +492,23 @@
         <li><a href="iex_api.model.html#iex_api.model.company.Income.ebit">(iex_api.model.company.Income attribute)</a>
 </li>
       </ul></li>
-      <li><a href="iex_api.model.html#iex_api.model.company.Financials.EBITDA">EBITDA (iex_api.model.company.Financials attribute)</a>
+      <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.EBITDA">EBITDA (iex_api.model.company.AdvancedStats attribute)</a>
+
+      <ul>
+        <li><a href="iex_api.model.html#iex_api.model.company.Financials.EBITDA">(iex_api.model.company.Financials attribute)</a>
 </li>
+      </ul></li>
       <li><a href="iex_api.model.html#iex_api.model.company.Company.employees">employees (iex_api.model.company.Company attribute)</a>
+
+      <ul>
+        <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.employees">(iex_api.model.company.KeyStats attribute)</a>
 </li>
+      </ul></li>
       <li><a href="iex_api.model.html#iex_api.model.options.EndOfDayOptions">EndOfDayOptions (class in iex_api.model.options)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.enterprise_value">enterprise_value (iex_api.model.company.AdvancedStats attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.enterprise_value_to_revenue">enterprise_value_to_revenue (iex_api.model.company.AdvancedStats attribute)</a>
 </li>
       <li><a href="iex_api.model.html#iex_api.model.ca.AdvancedDividend.ex_date">ex_date (iex_api.model.ca.AdvancedDividend attribute)</a>
 
@@ -474,6 +518,8 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.ex_dividend_date">ex_dividend_date (iex_api.model.company.KeyStats attribute)</a>
+</li>
       <li><a href="iex_api.model.html#iex_api.model.common.Symbol.exchange">exchange (iex_api.model.common.Symbol attribute)</a>
 
       <ul>
@@ -536,6 +582,8 @@
         <li><a href="iex_api.model.html#iex_api.model.ca.BasicDividend.flag">(iex_api.model.ca.BasicDividend attribute)</a>
 </li>
       </ul></li>
+      <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.forward_PERatio">forward_PERatio (iex_api.model.company.AdvancedStats attribute)</a>
+</li>
       <li><a href="iex_api.model.html#iex_api.model.ca.AdvancedDividend.frequency">frequency (iex_api.model.ca.AdvancedDividend attribute)</a>
 
       <ul>
@@ -553,6 +601,8 @@
 </li>
         <li><a href="iex_api.model.html#iex_api.model.common.Symbol.from_dict">(iex_api.model.common.Symbol class method)</a>
 </li>
+        <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.from_dict">(iex_api.model.company.AdvancedStats class method)</a>
+</li>
         <li><a href="iex_api.model.html#iex_api.model.company.CashFlow.from_dict">(iex_api.model.company.CashFlow class method)</a>
 </li>
         <li><a href="iex_api.model.html#iex_api.model.company.Company.from_dict">(iex_api.model.company.Company class method)</a>
@@ -560,6 +610,8 @@
         <li><a href="iex_api.model.html#iex_api.model.company.Financials.from_dict">(iex_api.model.company.Financials class method)</a>
 </li>
         <li><a href="iex_api.model.html#iex_api.model.company.Income.from_dict">(iex_api.model.company.Income class method)</a>
+</li>
+        <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.from_dict">(iex_api.model.company.KeyStats class method)</a>
 </li>
         <li><a href="iex_api.model.html#iex_api.model.options.EndOfDayOptions.from_dict">(iex_api.model.options.EndOfDayOptions class method)</a>
 </li>
@@ -587,6 +639,8 @@
 </li>
         <li><a href="iex_api.model.html#iex_api.model.common.Symbol.from_json">(iex_api.model.common.Symbol class method)</a>
 </li>
+        <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.from_json">(iex_api.model.company.AdvancedStats class method)</a>
+</li>
         <li><a href="iex_api.model.html#iex_api.model.company.CashFlow.from_json">(iex_api.model.company.CashFlow class method)</a>
 </li>
         <li><a href="iex_api.model.html#iex_api.model.company.Company.from_json">(iex_api.model.company.Company class method)</a>
@@ -594,6 +648,8 @@
         <li><a href="iex_api.model.html#iex_api.model.company.Financials.from_json">(iex_api.model.company.Financials class method)</a>
 </li>
         <li><a href="iex_api.model.html#iex_api.model.company.Income.from_json">(iex_api.model.company.Income class method)</a>
+</li>
+        <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.from_json">(iex_api.model.company.KeyStats class method)</a>
 </li>
         <li><a href="iex_api.model.html#iex_api.model.options.EndOfDayOptions.from_json">(iex_api.model.options.EndOfDayOptions class method)</a>
 </li>
@@ -605,7 +661,11 @@
       <li><a href="iex_api.model.html#iex_api.model.common.SymbolMixin.from_symbol">from_symbol() (iex_api.model.common.SymbolMixin class method)</a>
 
       <ul>
+        <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.from_symbol">(iex_api.model.company.AdvancedStats class method)</a>
+</li>
         <li><a href="iex_api.model.html#iex_api.model.company.Company.from_symbol">(iex_api.model.company.Company class method)</a>
+</li>
+        <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.from_symbol">(iex_api.model.company.KeyStats class method)</a>
 </li>
         <li><a href="iex_api.model.html#iex_api.model.stocks.HistoricalStockPrice.from_symbol">(iex_api.model.stocks.HistoricalStockPrice class method)</a>
 </li>
@@ -628,9 +688,11 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="iex_api.model.html#iex_api.model.ca.AdvancedDividend.gross_amount">gross_amount (iex_api.model.ca.AdvancedDividend attribute)</a>
 </li>
-      <li><a href="iex_api.model.html#iex_api.model.company.Financials.gross_profit">gross_profit (iex_api.model.company.Financials attribute)</a>
+      <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.gross_profit">gross_profit (iex_api.model.company.AdvancedStats attribute)</a>
 
       <ul>
+        <li><a href="iex_api.model.html#iex_api.model.company.Financials.gross_profit">(iex_api.model.company.Financials attribute)</a>
+</li>
         <li><a href="iex_api.model.html#iex_api.model.company.Income.gross_profit">(iex_api.model.company.Income attribute)</a>
 </li>
       </ul></li>
@@ -767,6 +829,10 @@
       <li><a href="iex_api.model.html#iex_api.model.common.IEXTimeSeriesObject.key">key (iex_api.model.common.IEXTimeSeriesObject attribute)</a>
 </li>
   </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats">KeyStats (class in iex_api.model.company)</a>
+</li>
+  </ul></td>
 </tr></table>
 
 <h2 id="L">L</h2>
@@ -834,15 +900,19 @@
 </li>
       <li><a href="iex_api.model.html#iex_api.model.stocks.IntraDayStockPrice.market_high">market_high (iex_api.model.stocks.IntraDayStockPrice attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="iex_api.model.html#iex_api.model.stocks.IntraDayStockPrice.market_low">market_low (iex_api.model.stocks.IntraDayStockPrice attribute)</a>
 </li>
       <li><a href="iex_api.model.html#iex_api.model.stocks.IntraDayStockPrice.market_number_of_trades">market_number_of_trades (iex_api.model.stocks.IntraDayStockPrice attribute)</a>
 </li>
       <li><a href="iex_api.model.html#iex_api.model.stocks.IntraDayStockPrice.market_open">market_open (iex_api.model.stocks.IntraDayStockPrice attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="iex_api.model.html#iex_api.model.stocks.IntraDayStockPrice.market_volume">market_volume (iex_api.model.stocks.IntraDayStockPrice attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.marketcap">marketcap (iex_api.model.company.KeyStats attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.max_change_percent">max_change_percent (iex_api.model.company.KeyStats attribute)</a>
 </li>
       <li><a href="iex_api.api.html#iex_api.api.api.IEXApi.message_count">message_count() (iex_api.api.api.IEXApi property)</a>
 </li>
@@ -855,6 +925,12 @@
       <li><a href="iex_api.model.html#iex_api.model.stocks.IntraDayStockPrice.minute">minute (iex_api.model.stocks.IntraDayStockPrice attribute)</a>
 </li>
       <li><a href="iex_api.api.model.html#iex_api.api.model.model.IEXRange.minute_intervals">minute_intervals() (iex_api.api.model.model.IEXRange method)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.month1_change_percent">month1_change_percent (iex_api.model.company.KeyStats attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.month3_change_percent">month3_change_percent (iex_api.model.company.KeyStats attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.month6_change_percent">month6_change_percent (iex_api.model.company.KeyStats attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -887,6 +963,10 @@
       <li><a href="iex_api.model.html#iex_api.model.company.Income.net_incomeBasic">net_incomeBasic (iex_api.model.company.Income attribute)</a>
 </li>
       <li><a href="iex_api.model.html#iex_api.model.company.Financials.net_tangible_assets">net_tangible_assets (iex_api.model.company.Financials attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.next_dividend_date">next_dividend_date (iex_api.model.company.KeyStats attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.next_earnings_date">next_earnings_date (iex_api.model.company.KeyStats attribute)</a>
 </li>
       <li><a href="iex_api.model.html#iex_api.model.ca.AdvancedDividend.notes">notes (iex_api.model.ca.AdvancedDividend attribute)</a>
 </li>
@@ -956,6 +1036,14 @@
         <li><a href="iex_api.model.html#iex_api.model.ca.BasicDividend.payment_date">(iex_api.model.ca.BasicDividend attribute)</a>
 </li>
       </ul></li>
+      <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.pe_high">pe_high (iex_api.model.company.AdvancedStats attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.pe_low">pe_low (iex_api.model.company.AdvancedStats attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.pe_ratio">pe_ratio (iex_api.model.company.KeyStats attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.peg_patio">peg_patio (iex_api.model.company.AdvancedStats attribute)</a>
+</li>
       <li><a href="iex_api.api.html#iex_api.api.api.IEXApi.perform_request">perform_request() (iex_api.api.api.IEXApi method)</a>
 </li>
       <li><a href="iex_api.api.html#iex_api.api.api.IEXApi.perform_time_series_request">perform_time_series_request() (iex_api.api.api.IEXApi method)</a>
@@ -972,9 +1060,17 @@
         <li><a href="iex_api.model.html#iex_api.model.company.Income.pretax_income">(iex_api.model.company.Income attribute)</a>
 </li>
       </ul></li>
+      <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.price_to_book">price_to_book (iex_api.model.company.AdvancedStats attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.price_to_sales">price_to_sales (iex_api.model.company.AdvancedStats attribute)</a>
+</li>
       <li><a href="iex_api.model.html#iex_api.model.company.Company.primary_sic_code">primary_sic_code (iex_api.model.company.Company attribute)</a>
 </li>
+      <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.profit_margin">profit_margin (iex_api.model.company.AdvancedStats attribute)</a>
+</li>
       <li><a href="iex_api.model.html#iex_api.model.company.Financials.property_plant_equipment">property_plant_equipment (iex_api.model.company.Financials attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.put_call_ratio">put_call_ratio (iex_api.model.company.AdvancedStats attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -1008,10 +1104,10 @@
       </ul></li>
       <li><a href="iex_api.model.html#iex_api.model.common.Symbol.region">region (iex_api.model.common.Symbol attribute)</a>
 </li>
+      <li><a href="iex_api.api.html#iex_api.api.api.IEXApi.register_pre_serialization_hook">register_pre_serialization_hook() (iex_api.api.api.IEXApi method)</a>
+</li>
       <li><a href="iex_api.model.html#iex_api.model.ca.AdvancedDividend.registration_date">registration_date (iex_api.model.ca.AdvancedDividend attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="iex_api.model.html#iex_api.model.company.CashFlow.report_date">report_date (iex_api.model.company.CashFlow attribute)</a>
 
       <ul>
@@ -1020,6 +1116,8 @@
         <li><a href="iex_api.model.html#iex_api.model.company.Income.report_date">(iex_api.model.company.Income attribute)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="iex_api.api.model.html#iex_api.api.model.model.IEXRange.requires_calendar">requires_calendar (iex_api.api.model.model.IEXRange attribute)</a>
 </li>
       <li><a href="iex_api.model.html#iex_api.model.company.Financials.research_and_development">research_and_development (iex_api.model.company.Financials attribute)</a>
@@ -1032,7 +1130,15 @@
 </li>
       <li><a href="iex_api.api.html#iex_api.api.api.IEXApiConfiguration.retry_count">retry_count (iex_api.api.api.IEXApiConfiguration attribute)</a>
 </li>
-      <li><a href="iex_api.model.html#iex_api.model.company.Financials.revenue">revenue (iex_api.model.company.Financials attribute)</a>
+      <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.revenue">revenue (iex_api.model.company.AdvancedStats attribute)</a>
+
+      <ul>
+        <li><a href="iex_api.model.html#iex_api.model.company.Financials.revenue">(iex_api.model.company.Financials attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.revenue_per_employee">revenue_per_employee (iex_api.model.company.AdvancedStats attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.revenue_per_share">revenue_per_share (iex_api.model.company.AdvancedStats attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -1049,6 +1155,8 @@
 </li>
         <li><a href="iex_api.model.html#iex_api.model.common.Symbol.schema">(iex_api.model.common.Symbol class method)</a>
 </li>
+        <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.schema">(iex_api.model.company.AdvancedStats class method)</a>
+</li>
         <li><a href="iex_api.model.html#iex_api.model.company.CashFlow.schema">(iex_api.model.company.CashFlow class method)</a>
 </li>
         <li><a href="iex_api.model.html#iex_api.model.company.Company.schema">(iex_api.model.company.Company class method)</a>
@@ -1056,6 +1164,8 @@
         <li><a href="iex_api.model.html#iex_api.model.company.Financials.schema">(iex_api.model.company.Financials class method)</a>
 </li>
         <li><a href="iex_api.model.html#iex_api.model.company.Income.schema">(iex_api.model.company.Income class method)</a>
+</li>
+        <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.schema">(iex_api.model.company.KeyStats class method)</a>
 </li>
         <li><a href="iex_api.model.html#iex_api.model.options.EndOfDayOptions.schema">(iex_api.model.options.EndOfDayOptions class method)</a>
 </li>
@@ -1087,6 +1197,8 @@
       <li><a href="iex_api.model.html#iex_api.model.options.EndOfDayOptions.settlement_price">settlement_price (iex_api.model.options.EndOfDayOptions attribute)</a>
 </li>
       <li><a href="iex_api.model.html#iex_api.model.company.Financials.shareholder_equity">shareholder_equity (iex_api.model.company.Financials attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.shares_outstanding">shares_outstanding (iex_api.model.company.KeyStats attribute)</a>
 </li>
       <li><a href="iex_api.model.html#iex_api.model.company.Financials.shortTerm_debt">shortTerm_debt (iex_api.model.company.Financials attribute)</a>
 </li>
@@ -1149,6 +1261,8 @@
 </li>
         <li><a href="iex_api.model.html#iex_api.model.common.Symbol.to_dict">(iex_api.model.common.Symbol method)</a>
 </li>
+        <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.to_dict">(iex_api.model.company.AdvancedStats method)</a>
+</li>
         <li><a href="iex_api.model.html#iex_api.model.company.CashFlow.to_dict">(iex_api.model.company.CashFlow method)</a>
 </li>
         <li><a href="iex_api.model.html#iex_api.model.company.Company.to_dict">(iex_api.model.company.Company method)</a>
@@ -1156,6 +1270,8 @@
         <li><a href="iex_api.model.html#iex_api.model.company.Financials.to_dict">(iex_api.model.company.Financials method)</a>
 </li>
         <li><a href="iex_api.model.html#iex_api.model.company.Income.to_dict">(iex_api.model.company.Income method)</a>
+</li>
+        <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.to_dict">(iex_api.model.company.KeyStats method)</a>
 </li>
         <li><a href="iex_api.model.html#iex_api.model.options.EndOfDayOptions.to_dict">(iex_api.model.options.EndOfDayOptions method)</a>
 </li>
@@ -1175,6 +1291,8 @@
 </li>
         <li><a href="iex_api.model.html#iex_api.model.common.Symbol.to_json">(iex_api.model.common.Symbol method)</a>
 </li>
+        <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.to_json">(iex_api.model.company.AdvancedStats method)</a>
+</li>
         <li><a href="iex_api.model.html#iex_api.model.company.CashFlow.to_json">(iex_api.model.company.CashFlow method)</a>
 </li>
         <li><a href="iex_api.model.html#iex_api.model.company.Company.to_json">(iex_api.model.company.Company method)</a>
@@ -1182,6 +1300,8 @@
         <li><a href="iex_api.model.html#iex_api.model.company.Financials.to_json">(iex_api.model.company.Financials method)</a>
 </li>
         <li><a href="iex_api.model.html#iex_api.model.company.Income.to_json">(iex_api.model.company.Income method)</a>
+</li>
+        <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.to_json">(iex_api.model.company.KeyStats method)</a>
 </li>
         <li><a href="iex_api.model.html#iex_api.model.options.EndOfDayOptions.to_json">(iex_api.model.options.EndOfDayOptions method)</a>
 </li>
@@ -1194,8 +1314,12 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="iex_api.model.html#iex_api.model.company.Financials.total_assets">total_assets (iex_api.model.company.Financials attribute)</a>
 </li>
-      <li><a href="iex_api.model.html#iex_api.model.company.Financials.total_cash">total_cash (iex_api.model.company.Financials attribute)</a>
+      <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.total_cash">total_cash (iex_api.model.company.AdvancedStats attribute)</a>
+
+      <ul>
+        <li><a href="iex_api.model.html#iex_api.model.company.Financials.total_cash">(iex_api.model.company.Financials attribute)</a>
 </li>
+      </ul></li>
       <li><a href="iex_api.model.html#iex_api.model.company.Financials.total_debt">total_debt (iex_api.model.company.Financials attribute)</a>
 </li>
       <li><a href="iex_api.model.html#iex_api.model.company.CashFlow.total_investing_cash_flows">total_investing_cash_flows (iex_api.model.company.CashFlow attribute)</a>
@@ -1206,13 +1330,19 @@
       </ul></li>
       <li><a href="iex_api.model.html#iex_api.model.company.Financials.total_liabilities">total_liabilities (iex_api.model.company.Financials attribute)</a>
 </li>
-      <li><a href="iex_api.model.html#iex_api.model.company.Financials.total_revenue">total_revenue (iex_api.model.company.Financials attribute)</a>
+      <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.total_revenue">total_revenue (iex_api.model.company.AdvancedStats attribute)</a>
 
       <ul>
+        <li><a href="iex_api.model.html#iex_api.model.company.Financials.total_revenue">(iex_api.model.company.Financials attribute)</a>
+</li>
         <li><a href="iex_api.model.html#iex_api.model.company.Income.total_revenue">(iex_api.model.company.Income attribute)</a>
 </li>
       </ul></li>
       <li><a href="iex_api.model.html#iex_api.model.company.Financials.treasury_stock">treasury_stock (iex_api.model.company.Financials attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.ttm_dividend_rate">ttm_dividend_rate (iex_api.model.company.KeyStats attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.ttmEPS">ttmEPS (iex_api.model.company.KeyStats attribute)</a>
 </li>
       <li><a href="iex_api.model.html#iex_api.model.common.Symbol.type">type (iex_api.model.common.Symbol attribute)</a>
 
@@ -1264,9 +1394,19 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="iex_api.api.model.html#iex_api.api.model.model.w">w() (in module iex_api.api.model.model)</a>
 </li>
+      <li><a href="iex_api.model.html#iex_api.model.company.Company.website">website (iex_api.model.company.Company attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.week52change">week52change (iex_api.model.company.KeyStats attribute)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="iex_api.model.html#iex_api.model.company.Company.website">website (iex_api.model.company.Company attribute)</a>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.week52high">week52high (iex_api.model.company.KeyStats attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.week52high_date">week52high_date (iex_api.model.company.AdvancedStats attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.week52low">week52low (iex_api.model.company.KeyStats attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.AdvancedStats.week52low_date">week52low_date (iex_api.model.company.AdvancedStats attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -1275,6 +1415,16 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="iex_api.api.model.html#iex_api.api.model.model.y">y() (in module iex_api.api.model.model)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.year1_change_percent">year1_change_percent (iex_api.model.company.KeyStats attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.year2_change_percent">year2_change_percent (iex_api.model.company.KeyStats attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.year5_change_percent">year5_change_percent (iex_api.model.company.KeyStats attribute)</a>
+</li>
+      <li><a href="iex_api.model.html#iex_api.model.company.KeyStats.ytd_change_percent">ytd_change_percent (iex_api.model.company.KeyStats attribute)</a>
 </li>
   </ul></td>
 </tr></table>

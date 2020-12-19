@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>iex_api.model.company &mdash; iex-api 0.0.4 documentation</title>
+  <title>iex_api.model.company &mdash; iex-api 0.0.5 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.0.4
+                0.0.5
               </div>
             
           
@@ -181,7 +181,7 @@
 
 <span class="kn">from</span> <span class="nn">dataclasses_json</span> <span class="kn">import</span> <span class="n">dataclass_json</span><span class="p">,</span> <span class="n">LetterCase</span>
 
-<span class="kn">from</span> <span class="nn">iex_api.model.common</span> <span class="kn">import</span> <span class="n">SymbolMixin</span><span class="p">,</span> <span class="n">IEXTimeSeriesObject</span>
+<span class="kn">from</span> <span class="nn">iex_api.model.common</span> <span class="kn">import</span> <span class="n">SymbolMixin</span><span class="p">,</span> <span class="n">IEXTimeSeriesObject</span><span class="p">,</span> <span class="n">IEXBaseMixin</span>
 
 
 <div class="viewcode-block" id="Financials"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.company.Financials">[docs]</a><span class="nd">@dataclass_json</span><span class="p">(</span><span class="n">letter_case</span><span class="o">=</span><span class="n">LetterCase</span><span class="o">.</span><span class="n">CAMEL</span><span class="p">)</span>
@@ -330,6 +330,76 @@
 <div class="viewcode-block" id="Company.from_symbol"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.company.Company.from_symbol">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">async</span> <span class="k">def</span> <span class="nf">from_symbol</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">symbol</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
         <span class="k">return</span> <span class="k">await</span> <span class="bp">cls</span><span class="o">.</span><span class="n">api</span><span class="p">()</span><span class="o">.</span><span class="n">perform_request</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;/stock/</span><span class="si">{</span><span class="n">symbol</span><span class="si">}</span><span class="s2">/company&quot;</span><span class="p">,</span> <span class="n">Company</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="KeyStats"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.company.KeyStats">[docs]</a><span class="nd">@dataclass_json</span><span class="p">(</span><span class="n">letter_case</span><span class="o">=</span><span class="n">LetterCase</span><span class="o">.</span><span class="n">CAMEL</span><span class="p">)</span>
+<span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">KeyStats</span><span class="p">(</span><span class="n">IEXBaseMixin</span><span class="p">):</span>
+    <span class="n">company_name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">marketcap</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">week52high</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">week52low</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">week52change</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">shares_outstanding</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">avg10_volume</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">avg30_volume</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">day200_moving_avg</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">day50_moving_avg</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">employees</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">ttmEPS</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">ttm_dividend_rate</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">dividend_yield</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">next_dividend_date</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span>
+    <span class="n">ex_dividend_date</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span>
+    <span class="n">next_earnings_date</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span>
+    <span class="n">pe_ratio</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">beta</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">max_change_percent</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">year5_change_percent</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">year2_change_percent</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">year1_change_percent</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">ytd_change_percent</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">month6_change_percent</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">month3_change_percent</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">month1_change_percent</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">day30Change_percent</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">day5Change_percent</span><span class="p">:</span> <span class="nb">float</span>
+
+<div class="viewcode-block" id="KeyStats.from_symbol"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.company.KeyStats.from_symbol">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">from_symbol</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">symbol</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="bp">cls</span><span class="o">.</span><span class="n">api</span><span class="p">()</span><span class="o">.</span><span class="n">perform_request</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;/stock/</span><span class="si">{</span><span class="n">symbol</span><span class="si">}</span><span class="s2">/stats&quot;</span><span class="p">,</span> <span class="n">KeyStats</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="AdvancedStats"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.company.AdvancedStats">[docs]</a><span class="nd">@dataclass_json</span><span class="p">(</span><span class="n">letter_case</span><span class="o">=</span><span class="n">LetterCase</span><span class="o">.</span><span class="n">CAMEL</span><span class="p">)</span>
+<span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">AdvancedStats</span><span class="p">(</span><span class="n">KeyStats</span><span class="p">):</span>
+    <span class="n">total_cash</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">current_debt</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">revenue</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">gross_profit</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">total_revenue</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">EBITDA</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">revenue_per_share</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">revenue_per_employee</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">debt_to_equity</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">profit_margin</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">enterprise_value</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">enterprise_value_to_revenue</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">price_to_sales</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">price_to_book</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">forward_PERatio</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">peg_patio</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">pe_high</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">pe_low</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">week52high_date</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span>
+    <span class="n">week52low_date</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span>
+    <span class="n">put_call_ratio</span><span class="p">:</span> <span class="nb">float</span>
+
+<div class="viewcode-block" id="AdvancedStats.from_symbol"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.company.AdvancedStats.from_symbol">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">from_symbol</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">symbol</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="bp">cls</span><span class="o">.</span><span class="n">api</span><span class="p">()</span><span class="o">.</span><span class="n">perform_request</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;/stock/</span><span class="si">{</span><span class="n">symbol</span><span class="si">}</span><span class="s2">/advanced-stats&quot;</span><span class="p">,</span> <span class="n">KeyStats</span>
+        <span class="p">)</span></div></div>
 </pre></div>
 
            </div>
