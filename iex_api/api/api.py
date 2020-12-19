@@ -4,7 +4,7 @@ import datetime
 
 from dataclasses import dataclass
 
-from typing import TypeVar, Generic, List, Union
+from typing import TypeVar, Generic, List, Union, Callable
 
 from aiohttp import ClientResponse
 from tenacity import retry, stop_after_attempt
@@ -41,12 +41,18 @@ class IEXApi:
     def __init__(self, configuration: IEXApiConfiguration):
         self.configuration = configuration
         self._messages_used = 0
+        self._before_serialization_hooks = []
 
         self.perform_request = retry(
             self.perform_request,
             mulitplier=configuration.backoff_factor,
             stop=stop_after_attempt(configuration.retry_count),
         )
+
+    def register_pre_serialization_hook(
+        self, hook: Callable[[Union[str, int, list, dict]], None]
+    ):
+        self._before_serialization_hooks.append(hook)
 
     @property
     def message_count(self):
@@ -157,6 +163,9 @@ class IEXApi:
 
                 response.raise_for_status()
                 data = await response.json()
+
+                for hook in self._before_serialization_hooks:
+                    hook(data)
 
                 if isinstance(data, list):
 
