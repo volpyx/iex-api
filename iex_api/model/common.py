@@ -30,7 +30,7 @@ class IEXTimeSeriesObject(IEXBaseMixin):
 
     @classmethod
     async def all(cls, key: str, sub_key: str = None, output_constructor=list):
-        return cls.series(
+        return await cls.series(
             key, sub_key, TimeSeriesRequest(last=1_000_000), output_constructor
         )
 
