@@ -175,7 +175,8 @@
            <div itemprop="articleBody">
             
   <h1>Source code for iex_api.model.options</h1><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">datetime</span>
+<span></span><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
 <span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
 <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Iterable</span>
 <span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">chain</span>
@@ -218,13 +219,19 @@
     <span class="n">volume</span><span class="p">:</span> <span class="nb">int</span>
 
 <div class="viewcode-block" id="EndOfDayOptions.latest"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.options.EndOfDayOptions.latest">[docs]</a>    <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">latest</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">symbol</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterable</span><span class="p">[</span><span class="s2">&quot;EndOfDayOptions&quot;</span><span class="p">]:</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">latest</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">symbol</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterable</span><span class="p">[</span><span class="s2">&quot;EndOfDayOptions&quot;</span><span class="p">]:</span>
         <span class="k">if</span> <span class="s2">&quot;n&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span> <span class="ow">and</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;n&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Latest end of day options only supports n=1&quot;</span><span class="p">)</span>
-        <span class="n">expiry_dates</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">api</span><span class="p">()</span><span class="o">.</span><span class="n">perform_request</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;/stock/</span><span class="si">{</span><span class="n">symbol</span><span class="si">}</span><span class="s2">/options/&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">chain</span><span class="p">(</span>
-            <span class="bp">cls</span><span class="o">.</span><span class="n">api</span><span class="p">()</span><span class="o">.</span><span class="n">perform_request</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;/stock/</span><span class="si">{</span><span class="n">symbol</span><span class="si">}</span><span class="s2">/options/</span><span class="si">{</span><span class="n">expiry_date</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-            <span class="k">for</span> <span class="n">expiry_date</span> <span class="ow">in</span> <span class="n">expiry_dates</span>
+        <span class="n">expiry_dates</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">cls</span><span class="o">.</span><span class="n">api</span><span class="p">()</span><span class="o">.</span><span class="n">perform_request</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;/stock/</span><span class="si">{</span><span class="n">symbol</span><span class="si">}</span><span class="s2">/options/&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span>
+            <span class="o">*</span><span class="n">chain</span><span class="p">(</span>
+                <span class="n">asyncio</span><span class="o">.</span><span class="n">ensure_future</span><span class="p">(</span>
+                    <span class="bp">cls</span><span class="o">.</span><span class="n">api</span><span class="p">()</span><span class="o">.</span><span class="n">perform_request</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;/stock/</span><span class="si">{</span><span class="n">symbol</span><span class="si">}</span><span class="s2">/options/</span><span class="si">{</span><span class="n">expiry_date</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">EndOfDayOptions</span>
+                    <span class="p">)</span>
+                <span class="p">)</span>
+                <span class="k">for</span> <span class="n">expiry_date</span> <span class="ow">in</span> <span class="n">expiry_dates</span>
+            <span class="p">)</span>
         <span class="p">)</span></div></div>
 </pre></div>
 

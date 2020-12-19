@@ -197,33 +197,16 @@
 <div class="section" id="features">
 <h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Supports Company, Income, CashFlow, Dividends and more</p></li>
-<li><p>Treat time-series as primary way of accessing data</p></li>
-<li><p>Typed</p></li>
-<li><p>Fully asynchronous</p></li>
+<li><p>Store values and retain the prior value in memory</p></li>
+<li><p>… some other functionality</p></li>
 </ul>
 </div>
 <div class="section" id="quick-start">
 <h2>Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h2>
-<p>Gather company information asynchronously:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-    <span class="s2">&quot;IEX_API_URL&quot;</span><span class="p">:</span> <span class="s2">&quot;https://sandbox.iexapis.com/stable/&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;IEX_API_TOKEN&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;&gt;&quot;</span><span class="p">,</span>
-<span class="p">})</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">iex_api</span> <span class="kn">import</span> <span class="n">Example</span>
 
-<span class="k">async</span> <span class="k">def</span> <span class="nf">gather_company_info</span><span class="p">(</span><span class="n">symbol</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-    <span class="n">income</span><span class="p">,</span> <span class="n">cashflow</span><span class="p">,</span> <span class="n">financials</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span>
-        <span class="n">Income</span><span class="o">.</span><span class="n">latest</span><span class="p">(</span><span class="n">symbol</span><span class="p">),</span>
-        <span class="n">CashFlow</span><span class="o">.</span><span class="n">latest</span><span class="p">(</span><span class="n">symbol</span><span class="p">),</span>
-        <span class="n">Financials</span><span class="o">.</span><span class="n">latest</span><span class="p">(</span><span class="n">symbol</span><span class="p">)</span>
-    <span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">income</span><span class="o">.</span><span class="n">gross_profit</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">cashflow</span><span class="o">.</span><span class="n">cash_flow</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">financials</span><span class="o">.</span><span class="n">ebit</span><span class="p">)</span>
-
-<span class="n">loop</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span>
-<span class="n">loop</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span><span class="n">gather_company_info</span><span class="p">(</span><span class="s1">&#39;AAPL&#39;</span><span class="p">))</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">Example</span><span class="p">()</span>
+<span class="n">a</span><span class="o">.</span><span class="n">get_value</span><span class="p">()</span>  <span class="c1"># 10</span>
 </pre></div>
 </div>
 </div>

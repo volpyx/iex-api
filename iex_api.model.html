@@ -563,7 +563,7 @@
 <dd><p>Bases: <a class="reference internal" href="#iex_api.model.common.IEXBaseMixin" title="iex_api.model.common.IEXBaseMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">iex_api.model.common.IEXBaseMixin</span></code></a></p>
 <dl class="method">
 <dt id="iex_api.model.common.IEXTimeSeriesObject.all">
-<em class="property">classmethod </em><code class="sig-name descname">all</code><span class="sig-paren">(</span><em class="sig-param">key: str</em>, <em class="sig-param">sub_key: str = None</em>, <em class="sig-param">output_constructor=&lt;class 'list'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#IEXTimeSeriesObject.all"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.IEXTimeSeriesObject.all" title="Permalink to this definition">¶</a></dt>
+<em class="property">async classmethod </em><code class="sig-name descname">all</code><span class="sig-paren">(</span><em class="sig-param">key: str</em>, <em class="sig-param">sub_key: str = None</em>, <em class="sig-param">output_constructor=&lt;class 'list'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#IEXTimeSeriesObject.all"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.IEXTimeSeriesObject.all" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -598,7 +598,7 @@
 
 <dl class="method">
 <dt id="iex_api.model.common.IEXTimeSeriesObject.latest">
-<em class="property">classmethod </em><code class="sig-name descname">latest</code><span class="sig-paren">(</span><em class="sig-param">key: str</em>, <em class="sig-param">sub_key: str = None</em>, <em class="sig-param">n: int = 1</em>, <em class="sig-param">output_constructor=&lt;class 'list'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#IEXTimeSeriesObject.latest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.IEXTimeSeriesObject.latest" title="Permalink to this definition">¶</a></dt>
+<em class="property">async classmethod </em><code class="sig-name descname">latest</code><span class="sig-paren">(</span><em class="sig-param">key: str</em>, <em class="sig-param">sub_key: str = None</em>, <em class="sig-param">n: int = 1</em>, <em class="sig-param">output_constructor=&lt;class 'list'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#IEXTimeSeriesObject.latest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.IEXTimeSeriesObject.latest" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -608,7 +608,7 @@
 
 <dl class="method">
 <dt id="iex_api.model.common.IEXTimeSeriesObject.series">
-<em class="property">classmethod </em><code class="sig-name descname">series</code><span class="sig-paren">(</span><em class="sig-param">key: str</em>, <em class="sig-param">sub_key: str</em>, <em class="sig-param">request: iex_api.api.model.model.TimeSeriesRequest = None</em>, <em class="sig-param">output_constructor=&lt;class 'list'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#IEXTimeSeriesObject.series"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.IEXTimeSeriesObject.series" title="Permalink to this definition">¶</a></dt>
+<em class="property">async classmethod </em><code class="sig-name descname">series</code><span class="sig-paren">(</span><em class="sig-param">key: str</em>, <em class="sig-param">sub_key: str</em>, <em class="sig-param">request: iex_api.api.model.model.TimeSeriesRequest = None</em>, <em class="sig-param">output_constructor=&lt;class 'list'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#IEXTimeSeriesObject.series"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.IEXTimeSeriesObject.series" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -640,7 +640,7 @@
 
 <dl class="class">
 <dt id="iex_api.model.common.Symbol">
-<em class="property">class </em><code class="sig-prename descclassname">iex_api.model.common.</code><code class="sig-name descname">Symbol</code><span class="sig-paren">(</span><em class="sig-param">symbol: str</em>, <em class="sig-param">exchange: str</em>, <em class="sig-param">name: str</em>, <em class="sig-param">date: datetime.date</em>, <em class="sig-param">type: str</em>, <em class="sig-param">iexId: str</em>, <em class="sig-param">region: str</em>, <em class="sig-param">currency: str</em>, <em class="sig-param">isEnabled: bool</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#Symbol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.Symbol" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">iex_api.model.common.</code><code class="sig-name descname">Symbol</code><span class="sig-paren">(</span><em class="sig-param">symbol: str</em>, <em class="sig-param">exchange: str</em>, <em class="sig-param">name: str</em>, <em class="sig-param">date: datetime.date</em>, <em class="sig-param">type: str</em>, <em class="sig-param">iex_id: str</em>, <em class="sig-param">region: str</em>, <em class="sig-param">currency: str</em>, <em class="sig-param">is_enabled: bool</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#Symbol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.Symbol" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#iex_api.model.common.IEXBaseMixin" title="iex_api.model.common.IEXBaseMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">iex_api.model.common.IEXBaseMixin</span></code></a></p>
 <dl class="attribute">
 <dt id="iex_api.model.common.Symbol.currency">
@@ -674,17 +674,17 @@
 
 <dl class="method">
 <dt id="iex_api.model.common.Symbol.get_all_symbols_for_region">
-<em class="property">classmethod </em><code class="sig-name descname">get_all_symbols_for_region</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#Symbol.get_all_symbols_for_region"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.Symbol.get_all_symbols_for_region" title="Permalink to this definition">¶</a></dt>
+<em class="property">async classmethod </em><code class="sig-name descname">get_all_symbols_for_region</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#Symbol.get_all_symbols_for_region"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.Symbol.get_all_symbols_for_region" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="iex_api.model.common.Symbol.iexId">
-<code class="sig-name descname">iexId</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.common.Symbol.iexId" title="Permalink to this definition">¶</a></dt>
+<dt id="iex_api.model.common.Symbol.iex_id">
+<code class="sig-name descname">iex_id</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.common.Symbol.iex_id" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
-<dt id="iex_api.model.common.Symbol.isEnabled">
-<code class="sig-name descname">isEnabled</code><em class="property">: bool</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.common.Symbol.isEnabled" title="Permalink to this definition">¶</a></dt>
+<dt id="iex_api.model.common.Symbol.is_enabled">
+<code class="sig-name descname">is_enabled</code><em class="property">: bool</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.common.Symbol.is_enabled" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -945,7 +945,7 @@
 
 <dl class="method">
 <dt id="iex_api.model.company.Company.from_symbol">
-<em class="property">classmethod </em><code class="sig-name descname">from_symbol</code><span class="sig-paren">(</span><em class="sig-param">symbol: str</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/company.html#Company.from_symbol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.company.Company.from_symbol" title="Permalink to this definition">¶</a></dt>
+<em class="property">async classmethod </em><code class="sig-name descname">from_symbol</code><span class="sig-paren">(</span><em class="sig-param">symbol: str</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/company.html#Company.from_symbol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.company.Company.from_symbol" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1616,7 +1616,7 @@
 
 <dl class="method">
 <dt id="iex_api.model.options.EndOfDayOptions.latest">
-<em class="property">classmethod </em><code class="sig-name descname">latest</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/options.html#EndOfDayOptions.latest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.latest" title="Permalink to this definition">¶</a></dt>
+<em class="property">async classmethod </em><code class="sig-name descname">latest</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/options.html#EndOfDayOptions.latest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.options.EndOfDayOptions.latest" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1755,7 +1755,7 @@
 
 <dl class="method">
 <dt id="iex_api.model.stocks.HistoricalStockPrice.from_symbol">
-<em class="property">classmethod </em><code class="sig-name descname">from_symbol</code><span class="sig-paren">(</span><em class="sig-param">symbol: str</em><span class="sig-paren">)</span> &#x2192; iex_api.model.stocks.HistoricalStockPrice<a class="reference internal" href="_modules/iex_api/model/stocks.html#HistoricalStockPrice.from_symbol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.from_symbol" title="Permalink to this definition">¶</a></dt>
+<em class="property">async classmethod </em><code class="sig-name descname">from_symbol</code><span class="sig-paren">(</span><em class="sig-param">symbol: str</em><span class="sig-paren">)</span> &#x2192; iex_api.model.stocks.HistoricalStockPrice<a class="reference internal" href="_modules/iex_api/model/stocks.html#HistoricalStockPrice.from_symbol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.from_symbol" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">

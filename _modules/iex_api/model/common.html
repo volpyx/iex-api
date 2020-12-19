@@ -206,31 +206,36 @@
     <span class="n">updated</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">]</span>
 
 <div class="viewcode-block" id="IEXTimeSeriesObject.all"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.common.IEXTimeSeriesObject.all">[docs]</a>    <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">all</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sub_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">output_constructor</span><span class="o">=</span><span class="nb">list</span><span class="p">):</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">all</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sub_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">output_constructor</span><span class="o">=</span><span class="nb">list</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">series</span><span class="p">(</span>
             <span class="n">key</span><span class="p">,</span> <span class="n">sub_key</span><span class="p">,</span> <span class="n">TimeSeriesRequest</span><span class="p">(</span><span class="n">last</span><span class="o">=</span><span class="mi">1_000_000</span><span class="p">),</span> <span class="n">output_constructor</span>
         <span class="p">)</span></div>
 
 <div class="viewcode-block" id="IEXTimeSeriesObject.latest"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.common.IEXTimeSeriesObject.latest">[docs]</a>    <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">latest</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sub_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">output_constructor</span><span class="o">=</span><span class="nb">list</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">series</span><span class="p">(</span>
-            <span class="n">key</span><span class="p">,</span>
-            <span class="n">sub_key</span><span class="p">,</span>
-            <span class="n">TimeSeriesRequest</span><span class="p">(</span><span class="n">last</span><span class="o">=</span><span class="n">n</span><span class="p">),</span>
-            <span class="n">output_constructor</span><span class="o">=</span><span class="n">output_constructor</span><span class="p">,</span>
-        <span class="p">)</span></div>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">latest</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">sub_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">output_constructor</span><span class="o">=</span><span class="nb">list</span>
+    <span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="k">await</span> <span class="bp">cls</span><span class="o">.</span><span class="n">series</span><span class="p">(</span>
+                <span class="n">key</span><span class="p">,</span>
+                <span class="n">sub_key</span><span class="p">,</span>
+                <span class="n">TimeSeriesRequest</span><span class="p">(</span><span class="n">last</span><span class="o">=</span><span class="n">n</span><span class="p">),</span>
+                <span class="n">output_constructor</span><span class="o">=</span><span class="n">output_constructor</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="p">)[</span><span class="mi">0</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="IEXTimeSeriesObject.series"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.common.IEXTimeSeriesObject.series">[docs]</a>    <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">series</span><span class="p">(</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">series</span><span class="p">(</span>
         <span class="bp">cls</span><span class="p">,</span>
         <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
         <span class="n">sub_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
         <span class="n">request</span><span class="p">:</span> <span class="n">TimeSeriesRequest</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">output_constructor</span><span class="o">=</span><span class="nb">list</span><span class="p">,</span>
     <span class="p">):</span>
-        <span class="k">return</span> <span class="n">output_constructor</span><span class="p">(</span>
-            <span class="bp">cls</span><span class="o">.</span><span class="n">api</span><span class="p">()</span><span class="o">.</span><span class="n">perform_time_series_request</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">ID</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="bp">cls</span><span class="p">,</span> <span class="n">sub_key</span><span class="p">,</span> <span class="n">request</span><span class="p">)</span>
-        <span class="p">)</span></div></div>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">cls</span><span class="o">.</span><span class="n">api</span><span class="p">()</span><span class="o">.</span><span class="n">perform_time_series_request</span><span class="p">(</span>
+            <span class="bp">cls</span><span class="o">.</span><span class="n">ID</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="bp">cls</span><span class="p">,</span> <span class="n">sub_key</span><span class="p">,</span> <span class="n">request</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">output_constructor</span><span class="p">(</span><span class="n">response</span><span class="p">)</span></div></div>
 
 
 <div class="viewcode-block" id="SymbolMixin"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.common.SymbolMixin">[docs]</a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -250,14 +255,16 @@
     <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
     <span class="n">date</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span>
     <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span>
-    <span class="n">iexId</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">iex_id</span><span class="p">:</span> <span class="nb">str</span>
     <span class="n">region</span><span class="p">:</span> <span class="nb">str</span>
     <span class="n">currency</span><span class="p">:</span> <span class="nb">str</span>
-    <span class="n">isEnabled</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">is_enabled</span><span class="p">:</span> <span class="nb">bool</span>
 
 <div class="viewcode-block" id="Symbol.get_all_symbols_for_region"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.common.Symbol.get_all_symbols_for_region">[docs]</a>    <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">get_all_symbols_for_region</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="s2">&quot;Symbol&quot;</span><span class="p">]:</span>
-        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">api</span><span class="p">()</span><span class="o">.</span><span class="n">perform_request</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;/ref-data/region/</span><span class="si">{</span><span class="n">region</span><span class="si">}</span><span class="s2">/symbols&quot;</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span></div></div>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_all_symbols_for_region</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="s2">&quot;Symbol&quot;</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="bp">cls</span><span class="o">.</span><span class="n">api</span><span class="p">()</span><span class="o">.</span><span class="n">perform_request</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;/ref-data/region/</span><span class="si">{</span><span class="n">region</span><span class="si">}</span><span class="s2">/symbols&quot;</span><span class="p">,</span> <span class="bp">cls</span>
+        <span class="p">)</span></div></div>
 </pre></div>
 
            </div>

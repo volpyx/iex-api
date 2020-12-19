@@ -328,8 +328,8 @@
     <span class="n">phone</span><span class="p">:</span> <span class="nb">str</span>
 
 <div class="viewcode-block" id="Company.from_symbol"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.company.Company.from_symbol">[docs]</a>    <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">from_symbol</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">symbol</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">api</span><span class="p">()</span><span class="o">.</span><span class="n">perform_request</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;/stock/</span><span class="si">{</span><span class="n">symbol</span><span class="si">}</span><span class="s2">/company&quot;</span><span class="p">,</span> <span class="n">Company</span><span class="p">)</span></div></div>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">from_symbol</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">symbol</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="bp">cls</span><span class="o">.</span><span class="n">api</span><span class="p">()</span><span class="o">.</span><span class="n">perform_request</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;/stock/</span><span class="si">{</span><span class="n">symbol</span><span class="si">}</span><span class="s2">/company&quot;</span><span class="p">,</span> <span class="n">Company</span><span class="p">)</span></div></div>
 </pre></div>
 
            </div>
