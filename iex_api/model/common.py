@@ -44,9 +44,7 @@ class IEXTimeSeriesObject(IEXBaseMixin):
             TimeSeriesRequest(last=n),
             output_constructor=output_constructor,
         )
-        if n == 1:
-            return data[0]
-        return data
+        return data[0] if n == 1 else data
 
     @classmethod
     async def series(

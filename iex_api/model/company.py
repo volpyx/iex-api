@@ -4,7 +4,7 @@ from typing import List, Optional
 
 from dataclasses_json import dataclass_json, LetterCase
 
-from iex_api.model.common import SymbolMixin, IEXTimeSeriesObject
+from iex_api.model.common import SymbolMixin, IEXTimeSeriesObject, IEXBaseMixin
 
 
 @dataclass_json(letter_case=LetterCase.CAMEL)
@@ -153,3 +153,73 @@ class Company(SymbolMixin):
     @classmethod
     async def from_symbol(cls, symbol: str):
         return await cls.api().perform_request(f"/stock/{symbol}/company", Company)
+
+
+@dataclass_json(letter_case=LetterCase.CAMEL)
+@dataclass(frozen=True)
+class KeyStats(IEXBaseMixin):
+    company_name: str
+    marketcap: int
+    week52high: float
+    week52low: float
+    week52change: float
+    shares_outstanding: float
+    avg10_volume: int
+    avg30_volume: int
+    day200_moving_avg: int
+    day50_moving_avg: int
+    employees: int
+    ttmEPS: float
+    ttm_dividend_rate: float
+    dividend_yield: float
+    next_dividend_date: datetime.date
+    ex_dividend_date: datetime.date
+    next_earnings_date: datetime.date
+    pe_ratio: float
+    beta: float
+    max_change_percent: float
+    year5_change_percent: float
+    year2_change_percent: float
+    year1_change_percent: float
+    ytd_change_percent: float
+    month6_change_percent: float
+    month3_change_percent: float
+    month1_change_percent: float
+    day30Change_percent: float
+    day5Change_percent: float
+
+    @classmethod
+    async def from_symbol(cls, symbol: str):
+        return await cls.api().perform_request(f"/stock/{symbol}/stats", KeyStats)
+
+
+@dataclass_json(letter_case=LetterCase.CAMEL)
+@dataclass(frozen=True)
+class AdvancedStats(KeyStats):
+    total_cash: int
+    current_debt: int
+    revenue: int
+    gross_profit: int
+    total_revenue: int
+    EBITDA: int
+    revenue_per_share: float
+    revenue_per_employee: float
+    debt_to_equity: float
+    profit_margin: float
+    enterprise_value: int
+    enterprise_value_to_revenue: float
+    price_to_sales: float
+    price_to_book: float
+    forward_PERatio: float
+    peg_patio: float
+    pe_high: float
+    pe_low: float
+    week52high_date: datetime.date
+    week52low_date: datetime.date
+    put_call_ratio: float
+
+    @classmethod
+    async def from_symbol(cls, symbol: str):
+        return await cls.api().perform_request(
+            f"/stock/{symbol}/advanced-stats", KeyStats
+        )
