@@ -10,16 +10,38 @@ Unofficial Python IEX Cloud Api.
 
 ## Features
 
--   Store values and retain the prior value in memory
--   ... some other functionality
+-   Supports Income, CashFlow, Financials, Quote, EndOfDayPrice
+-   Primarily uses time-series to make it easier to query older data
+-   Is asynchronous
+-   Typed
 
 ## Quick Start
 
 ```python
-from iex_api import Example
+import asyncio
+import os
 
-a = Example()
-a.get_value()  # 10
+from iex_api.model.company import Income, CashFlow, Financials
+
+os.environ.update({
+    "IEX_API_URL": "https://sandbox.iexapis.com/stable/",
+    "IEX_API_TOKEN": "<>",
+})
+
+
+async def gather_company_info(symbol: str):
+    income, cashflow, financials = await asyncio.gather(
+        Income.latest(symbol),
+        CashFlow.latest(symbol),
+        Financials.latest(symbol)
+    )
+    print(income.gross_profit)
+    print(cashflow.cash_flow)
+    print(financials.ebit)
+
+loop = asyncio.get_event_loop()
+loop.run_until_complete(gather_company_info('AAPL'))
+
 ```
 
 ## Installation
