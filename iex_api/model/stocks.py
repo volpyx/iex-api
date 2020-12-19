@@ -49,5 +49,5 @@ class HistoricalStockPrice(IEXTimeSeriesObject, SymbolMixin):
     change_percent: Optional[float]
 
     @classmethod
-    def from_symbol(cls, symbol: str) -> "HistoricalStockPrice":
-        return cls.api().chart()
+    async def from_symbol(cls, symbol: str) -> "HistoricalStockPrice":
+        return await cls.api().chart()

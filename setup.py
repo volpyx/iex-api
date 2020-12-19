@@ -39,7 +39,8 @@ dev_requirements = [
 
 requirements = [
     "dataclasses-json",
-    "requests",
+    "aiohttp",
+    "tenacity"
 ]
 
 extra_requirements = {

@@ -151,5 +151,5 @@ class Company(SymbolMixin):
     phone: str
 
     @classmethod
-    def from_symbol(cls, symbol: str):
-        return cls.api().perform_request(f"/stock/{symbol}/company", Company)
+    async def from_symbol(cls, symbol: str):
+        return await cls.api().perform_request(f"/stock/{symbol}/company", Company)

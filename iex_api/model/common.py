@@ -29,31 +29,36 @@ class IEXTimeSeriesObject(IEXBaseMixin):
     updated: Optional[datetime.date]
 
     @classmethod
-    def all(cls, key: str, sub_key: str = None, output_constructor=list):
+    async def all(cls, key: str, sub_key: str = None, output_constructor=list):
         return cls.series(
             key, sub_key, TimeSeriesRequest(last=1_000_000), output_constructor
         )
 
     @classmethod
-    def latest(cls, key: str, sub_key: str = None, n: int = 1, output_constructor=list):
-        return cls.series(
-            key,
-            sub_key,
-            TimeSeriesRequest(last=n),
-            output_constructor=output_constructor,
-        )
+    async def latest(
+        cls, key: str, sub_key: str = None, n: int = 1, output_constructor=list
+    ):
+        return (
+            await cls.series(
+                key,
+                sub_key,
+                TimeSeriesRequest(last=n),
+                output_constructor=output_constructor,
+            )
+        )[0]
 
     @classmethod
-    def series(
+    async def series(
         cls,
         key: str,
         sub_key: str,
         request: TimeSeriesRequest = None,
         output_constructor=list,
     ):
-        return output_constructor(
-            cls.api().perform_time_series_request(cls.ID, key, cls, sub_key, request)
+        response = await cls.api().perform_time_series_request(
+            cls.ID, key, cls, sub_key, request
         )
+        return output_constructor(response)
 
 
 @dataclass(frozen=True)
@@ -79,5 +84,7 @@ class Symbol(IEXBaseMixin):
     is_enabled: bool
 
     @classmethod
-    def get_all_symbols_for_region(cls, region: str) -> List["Symbol"]:
-        return cls.api().perform_request(f"/ref-data/region/{region}/symbols", cls)
+    async def get_all_symbols_for_region(cls, region: str) -> List["Symbol"]:
+        return await cls.api().perform_request(
+            f"/ref-data/region/{region}/symbols", cls
+        )
