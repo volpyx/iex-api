@@ -87,6 +87,6 @@ setup(
     url="https://github.com/ThomasKluiters/iex_api",
     # Do not edit this string manually, always use bumpversion
     # Details in CONTRIBUTING.rst
-    version="0.0.7",
+    version="0.0.8",
     zip_safe=False,
 )

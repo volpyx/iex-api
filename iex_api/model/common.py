@@ -88,7 +88,8 @@ class SymbolMixin(IEXBaseMixin):
 
         def extract_parts(data: dict):
             return (
-                cls.from_dict(part[cls.PATH.lower()], infer_missing=True) for part in list(data.values())
+                cls.from_dict(part[cls.PATH.lower()], infer_missing=True)
+                for part in list(data.values())
             )
 
         return (item for sublist in map(extract_parts, all_data) for item in sublist)
