@@ -175,8 +175,10 @@
            <div itemprop="articleBody">
             
   <h1>Source code for iex_api.model.common</h1><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
+<span></span><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">chain</span>
 <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">List</span>
 
 <span class="kn">from</span> <span class="nn">dataclasses_json</span> <span class="kn">import</span> <span class="n">dataclass_json</span><span class="p">,</span> <span class="n">LetterCase</span>
@@ -239,11 +241,34 @@
 
 <div class="viewcode-block" id="SymbolMixin"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.common.SymbolMixin">[docs]</a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">class</span> <span class="nc">SymbolMixin</span><span class="p">(</span><span class="n">IEXBaseMixin</span><span class="p">):</span>
-    <span class="n">symbol</span><span class="p">:</span> <span class="nb">str</span>
-
 <div class="viewcode-block" id="SymbolMixin.from_symbol"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.common.SymbolMixin.from_symbol">[docs]</a>    <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">from_symbol</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">symbol</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div></div>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">from_symbol</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">symbol</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="bp">cls</span><span class="o">.</span><span class="n">api</span><span class="p">()</span><span class="o">.</span><span class="n">perform_request</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;/stock/</span><span class="si">{</span><span class="n">symbol</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="bp">cls</span><span class="o">.</span><span class="n">PATH</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="SymbolMixin.from_symbols"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.common.SymbolMixin.from_symbols">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">from_symbols</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">symbols</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]):</span>
+        <span class="n">all_data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span>
+            <span class="o">*</span><span class="n">chain</span><span class="p">(</span>
+                <span class="n">asyncio</span><span class="o">.</span><span class="n">ensure_future</span><span class="p">(</span>
+                    <span class="bp">cls</span><span class="o">.</span><span class="n">api</span><span class="p">()</span><span class="o">.</span><span class="n">perform_request</span><span class="p">(</span>
+                        <span class="s2">&quot;/stock/market/batch&quot;</span><span class="p">,</span>
+                        <span class="nb">dict</span><span class="p">,</span>
+                        <span class="p">{</span>
+                            <span class="s2">&quot;symbols&quot;</span><span class="p">:</span> <span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">symbols</span><span class="p">[</span><span class="n">start</span> <span class="p">:</span> <span class="n">start</span> <span class="o">+</span> <span class="mi">100</span><span class="p">]),</span>
+                            <span class="s2">&quot;types&quot;</span><span class="p">:</span> <span class="bp">cls</span><span class="o">.</span><span class="n">PATH</span><span class="p">,</span>
+                        <span class="p">},</span>
+                    <span class="p">)</span>
+                <span class="p">)</span>
+                <span class="k">for</span> <span class="n">start</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">symbols</span><span class="p">),</span> <span class="mi">100</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">extract_parts</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="k">return</span> <span class="p">(</span>
+                <span class="bp">cls</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">part</span><span class="p">[</span><span class="bp">cls</span><span class="o">.</span><span class="n">PATH</span><span class="o">.</span><span class="n">lower</span><span class="p">()])</span> <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+            <span class="p">)</span>
+
+        <span class="k">return</span> <span class="p">(</span><span class="n">item</span> <span class="k">for</span> <span class="n">sublist</span> <span class="ow">in</span> <span class="nb">map</span><span class="p">(</span><span class="n">extract_parts</span><span class="p">,</span> <span class="n">all_data</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">sublist</span><span class="p">)</span></div></div>
 
 
 <div class="viewcode-block" id="Symbol"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.common.Symbol">[docs]</a><span class="nd">@dataclass_json</span><span class="p">(</span><span class="n">letter_case</span><span class="o">=</span><span class="n">LetterCase</span><span class="o">.</span><span class="n">CAMEL</span><span class="p">)</span>

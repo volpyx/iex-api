@@ -181,7 +181,7 @@
 
 <span class="kn">from</span> <span class="nn">dataclasses_json</span> <span class="kn">import</span> <span class="n">dataclass_json</span><span class="p">,</span> <span class="n">LetterCase</span>
 
-<span class="kn">from</span> <span class="nn">iex_api.model.common</span> <span class="kn">import</span> <span class="n">SymbolMixin</span><span class="p">,</span> <span class="n">IEXTimeSeriesObject</span><span class="p">,</span> <span class="n">IEXBaseMixin</span>
+<span class="kn">from</span> <span class="nn">iex_api.model.common</span> <span class="kn">import</span> <span class="n">SymbolMixin</span><span class="p">,</span> <span class="n">IEXTimeSeriesObject</span>
 
 
 <div class="viewcode-block" id="Financials"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.company.Financials">[docs]</a><span class="nd">@dataclass_json</span><span class="p">(</span><span class="n">letter_case</span><span class="o">=</span><span class="n">LetterCase</span><span class="o">.</span><span class="n">CAMEL</span><span class="p">)</span>
@@ -307,6 +307,7 @@
 <div class="viewcode-block" id="Company"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.company.Company">[docs]</a><span class="nd">@dataclass_json</span><span class="p">(</span><span class="n">letter_case</span><span class="o">=</span><span class="n">LetterCase</span><span class="o">.</span><span class="n">CAMEL</span><span class="p">)</span>
 <span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">class</span> <span class="nc">Company</span><span class="p">(</span><span class="n">SymbolMixin</span><span class="p">):</span>
+    <span class="n">symbol</span><span class="p">:</span> <span class="nb">str</span>
     <span class="n">company_name</span><span class="p">:</span> <span class="nb">str</span>
     <span class="n">exchange</span><span class="p">:</span> <span class="nb">str</span>
     <span class="n">industry</span><span class="p">:</span> <span class="nb">str</span>
@@ -327,14 +328,12 @@
     <span class="n">country</span><span class="p">:</span> <span class="nb">str</span>
     <span class="n">phone</span><span class="p">:</span> <span class="nb">str</span>
 
-<div class="viewcode-block" id="Company.from_symbol"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.company.Company.from_symbol">[docs]</a>    <span class="nd">@classmethod</span>
-    <span class="k">async</span> <span class="k">def</span> <span class="nf">from_symbol</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">symbol</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="k">return</span> <span class="k">await</span> <span class="bp">cls</span><span class="o">.</span><span class="n">api</span><span class="p">()</span><span class="o">.</span><span class="n">perform_request</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;/stock/</span><span class="si">{</span><span class="n">symbol</span><span class="si">}</span><span class="s2">/company&quot;</span><span class="p">,</span> <span class="n">Company</span><span class="p">)</span></div></div>
+    <span class="n">PATH</span> <span class="o">=</span> <span class="s2">&quot;company&quot;</span></div>
 
 
 <div class="viewcode-block" id="KeyStats"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.company.KeyStats">[docs]</a><span class="nd">@dataclass_json</span><span class="p">(</span><span class="n">letter_case</span><span class="o">=</span><span class="n">LetterCase</span><span class="o">.</span><span class="n">CAMEL</span><span class="p">)</span>
 <span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="k">class</span> <span class="nc">KeyStats</span><span class="p">(</span><span class="n">IEXBaseMixin</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">KeyStats</span><span class="p">(</span><span class="n">SymbolMixin</span><span class="p">):</span>
     <span class="n">company_name</span><span class="p">:</span> <span class="nb">str</span>
     <span class="n">marketcap</span><span class="p">:</span> <span class="nb">int</span>
     <span class="n">week52high</span><span class="p">:</span> <span class="nb">float</span>
@@ -365,9 +364,7 @@
     <span class="n">day30Change_percent</span><span class="p">:</span> <span class="nb">float</span>
     <span class="n">day5Change_percent</span><span class="p">:</span> <span class="nb">float</span>
 
-<div class="viewcode-block" id="KeyStats.from_symbol"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.company.KeyStats.from_symbol">[docs]</a>    <span class="nd">@classmethod</span>
-    <span class="k">async</span> <span class="k">def</span> <span class="nf">from_symbol</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">symbol</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="k">return</span> <span class="k">await</span> <span class="bp">cls</span><span class="o">.</span><span class="n">api</span><span class="p">()</span><span class="o">.</span><span class="n">perform_request</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;/stock/</span><span class="si">{</span><span class="n">symbol</span><span class="si">}</span><span class="s2">/stats&quot;</span><span class="p">,</span> <span class="n">KeyStats</span><span class="p">)</span></div></div>
+    <span class="n">PATH</span> <span class="o">=</span> <span class="s2">&quot;stats&quot;</span></div>
 
 
 <div class="viewcode-block" id="AdvancedStats"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.company.AdvancedStats">[docs]</a><span class="nd">@dataclass_json</span><span class="p">(</span><span class="n">letter_case</span><span class="o">=</span><span class="n">LetterCase</span><span class="o">.</span><span class="n">CAMEL</span><span class="p">)</span>
@@ -395,11 +392,7 @@
     <span class="n">week52low_date</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span>
     <span class="n">put_call_ratio</span><span class="p">:</span> <span class="nb">float</span>
 
-<div class="viewcode-block" id="AdvancedStats.from_symbol"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.company.AdvancedStats.from_symbol">[docs]</a>    <span class="nd">@classmethod</span>
-    <span class="k">async</span> <span class="k">def</span> <span class="nf">from_symbol</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">symbol</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="k">return</span> <span class="k">await</span> <span class="bp">cls</span><span class="o">.</span><span class="n">api</span><span class="p">()</span><span class="o">.</span><span class="n">perform_request</span><span class="p">(</span>
-            <span class="sa">f</span><span class="s2">&quot;/stock/</span><span class="si">{</span><span class="n">symbol</span><span class="si">}</span><span class="s2">/advanced-stats&quot;</span><span class="p">,</span> <span class="n">KeyStats</span>
-        <span class="p">)</span></div></div>
+    <span class="n">PATH</span> <span class="o">=</span> <span class="s2">&quot;advanced-stats&quot;</span></div>
 </pre></div>
 
            </div>

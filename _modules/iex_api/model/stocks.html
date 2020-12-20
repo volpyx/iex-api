@@ -204,6 +204,7 @@
 <div class="viewcode-block" id="HistoricalStockPrice"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.stocks.HistoricalStockPrice">[docs]</a><span class="nd">@dataclass_json</span><span class="p">(</span><span class="n">letter_case</span><span class="o">=</span><span class="n">LetterCase</span><span class="o">.</span><span class="n">CAMEL</span><span class="p">)</span>
 <span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">class</span> <span class="nc">HistoricalStockPrice</span><span class="p">(</span><span class="n">IEXTimeSeriesObject</span><span class="p">,</span> <span class="n">SymbolMixin</span><span class="p">):</span>
+    <span class="n">symbol</span><span class="p">:</span> <span class="nb">str</span>
     <span class="n">close</span><span class="p">:</span> <span class="nb">float</span>
     <span class="n">high</span><span class="p">:</span> <span class="nb">float</span>
     <span class="n">low</span><span class="p">:</span> <span class="nb">float</span>

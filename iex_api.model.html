@@ -726,16 +726,16 @@
 
 <dl class="class">
 <dt id="iex_api.model.common.SymbolMixin">
-<em class="property">class </em><code class="sig-prename descclassname">iex_api.model.common.</code><code class="sig-name descname">SymbolMixin</code><span class="sig-paren">(</span><em class="sig-param">symbol: str</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#SymbolMixin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.SymbolMixin" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">iex_api.model.common.</code><code class="sig-name descname">SymbolMixin</code><a class="reference internal" href="_modules/iex_api/model/common.html#SymbolMixin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.SymbolMixin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#iex_api.model.common.IEXBaseMixin" title="iex_api.model.common.IEXBaseMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">iex_api.model.common.IEXBaseMixin</span></code></a></p>
 <dl class="method">
 <dt id="iex_api.model.common.SymbolMixin.from_symbol">
-<em class="property">classmethod </em><code class="sig-name descname">from_symbol</code><span class="sig-paren">(</span><em class="sig-param">symbol: str</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#SymbolMixin.from_symbol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.SymbolMixin.from_symbol" title="Permalink to this definition">¶</a></dt>
+<em class="property">async classmethod </em><code class="sig-name descname">from_symbol</code><span class="sig-paren">(</span><em class="sig-param">symbol: str</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#SymbolMixin.from_symbol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.SymbolMixin.from_symbol" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
-<dt id="iex_api.model.common.SymbolMixin.symbol">
-<code class="sig-name descname">symbol</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.common.SymbolMixin.symbol" title="Permalink to this definition">¶</a></dt>
+<dl class="method">
+<dt id="iex_api.model.common.SymbolMixin.from_symbols">
+<em class="property">async classmethod </em><code class="sig-name descname">from_symbols</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/common.html#SymbolMixin.from_symbols"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.common.SymbolMixin.from_symbols" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -750,6 +750,11 @@
 <dl class="attribute">
 <dt id="iex_api.model.company.AdvancedStats.EBITDA">
 <code class="sig-name descname">EBITDA</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.AdvancedStats.EBITDA" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.AdvancedStats.PATH">
+<code class="sig-name descname">PATH</code><em class="property"> = 'advanced-stats'</em><a class="headerlink" href="#iex_api.model.company.AdvancedStats.PATH" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -790,11 +795,6 @@
 <dl class="method">
 <dt id="iex_api.model.company.AdvancedStats.from_json">
 <em class="property">classmethod </em><code class="sig-name descname">from_json</code><span class="sig-paren">(</span><em class="sig-param">s: Union[str, bytes, bytearray], *, parse_float=None, parse_int=None, parse_constant=None, infer_missing=False, **kw</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.company.AdvancedStats.from_json" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="iex_api.model.company.AdvancedStats.from_symbol">
-<em class="property">async classmethod </em><code class="sig-name descname">from_symbol</code><span class="sig-paren">(</span><em class="sig-param">symbol: str</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/company.html#AdvancedStats.from_symbol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.company.AdvancedStats.from_symbol" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1035,6 +1035,11 @@
 <dd></dd></dl>
 
 <dl class="attribute">
+<dt id="iex_api.model.company.Company.PATH">
+<code class="sig-name descname">PATH</code><em class="property"> = 'company'</em><a class="headerlink" href="#iex_api.model.company.Company.PATH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
 <dt id="iex_api.model.company.Company.address">
 <code class="sig-name descname">address</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Company.address" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -1089,11 +1094,6 @@
 <em class="property">classmethod </em><code class="sig-name descname">from_json</code><span class="sig-paren">(</span><em class="sig-param">s: Union[str, bytes, bytearray], *, parse_float=None, parse_int=None, parse_constant=None, infer_missing=False, **kw</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.company.Company.from_json" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="iex_api.model.company.Company.from_symbol">
-<em class="property">async classmethod </em><code class="sig-name descname">from_symbol</code><span class="sig-paren">(</span><em class="sig-param">symbol: str</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/company.html#Company.from_symbol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.company.Company.from_symbol" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 <dl class="attribute">
 <dt id="iex_api.model.company.Company.industry">
 <code class="sig-name descname">industry</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Company.industry" title="Permalink to this definition">¶</a></dt>
@@ -1132,6 +1132,11 @@
 <dl class="attribute">
 <dt id="iex_api.model.company.Company.state">
 <code class="sig-name descname">state</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Company.state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.company.Company.symbol">
+<code class="sig-name descname">symbol</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.Company.symbol" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -1646,7 +1651,12 @@
 <dl class="class">
 <dt id="iex_api.model.company.KeyStats">
 <em class="property">class </em><code class="sig-prename descclassname">iex_api.model.company.</code><code class="sig-name descname">KeyStats</code><span class="sig-paren">(</span><em class="sig-param">company_name: str</em>, <em class="sig-param">marketcap: int</em>, <em class="sig-param">week52high: float</em>, <em class="sig-param">week52low: float</em>, <em class="sig-param">week52change: float</em>, <em class="sig-param">shares_outstanding: float</em>, <em class="sig-param">avg10_volume: int</em>, <em class="sig-param">avg30_volume: int</em>, <em class="sig-param">day200_moving_avg: int</em>, <em class="sig-param">day50_moving_avg: int</em>, <em class="sig-param">employees: int</em>, <em class="sig-param">ttmEPS: float</em>, <em class="sig-param">ttm_dividend_rate: float</em>, <em class="sig-param">dividend_yield: float</em>, <em class="sig-param">next_dividend_date: datetime.date</em>, <em class="sig-param">ex_dividend_date: datetime.date</em>, <em class="sig-param">next_earnings_date: datetime.date</em>, <em class="sig-param">pe_ratio: float</em>, <em class="sig-param">beta: float</em>, <em class="sig-param">max_change_percent: float</em>, <em class="sig-param">year5_change_percent: float</em>, <em class="sig-param">year2_change_percent: float</em>, <em class="sig-param">year1_change_percent: float</em>, <em class="sig-param">ytd_change_percent: float</em>, <em class="sig-param">month6_change_percent: float</em>, <em class="sig-param">month3_change_percent: float</em>, <em class="sig-param">month1_change_percent: float</em>, <em class="sig-param">day30Change_percent: float</em>, <em class="sig-param">day5Change_percent: float</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/company.html#KeyStats"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.company.KeyStats" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#iex_api.model.common.IEXBaseMixin" title="iex_api.model.common.IEXBaseMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">iex_api.model.common.IEXBaseMixin</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#iex_api.model.common.SymbolMixin" title="iex_api.model.common.SymbolMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">iex_api.model.common.SymbolMixin</span></code></a></p>
+<dl class="attribute">
+<dt id="iex_api.model.company.KeyStats.PATH">
+<code class="sig-name descname">PATH</code><em class="property"> = 'stats'</em><a class="headerlink" href="#iex_api.model.company.KeyStats.PATH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="attribute">
 <dt id="iex_api.model.company.KeyStats.avg10_volume">
 <code class="sig-name descname">avg10_volume</code><em class="property">: int</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.company.KeyStats.avg10_volume" title="Permalink to this definition">¶</a></dt>
@@ -1715,11 +1725,6 @@
 <dl class="method">
 <dt id="iex_api.model.company.KeyStats.from_json">
 <em class="property">classmethod </em><code class="sig-name descname">from_json</code><span class="sig-paren">(</span><em class="sig-param">s: Union[str, bytes, bytearray], *, parse_float=None, parse_int=None, parse_constant=None, infer_missing=False, **kw</em><span class="sig-paren">)</span> &#x2192; A<a class="headerlink" href="#iex_api.model.company.KeyStats.from_json" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="iex_api.model.company.KeyStats.from_symbol">
-<em class="property">async classmethod </em><code class="sig-name descname">from_symbol</code><span class="sig-paren">(</span><em class="sig-param">symbol: str</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/company.html#KeyStats.from_symbol"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.company.KeyStats.from_symbol" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -2023,7 +2028,7 @@
 <span id="iex-api-model-stocks-module"></span><h2>iex_api.model.stocks module<a class="headerlink" href="#module-iex_api.model.stocks" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="iex_api.model.stocks.HistoricalStockPrice">
-<em class="property">class </em><code class="sig-prename descclassname">iex_api.model.stocks.</code><code class="sig-name descname">HistoricalStockPrice</code><span class="sig-paren">(</span><em class="sig-param">symbol: str, id: str, key: str, source: Optional[str], sub_key: Optional[str], date: Optional[datetime.date], updated: Optional[datetime.date], close: float, high: float, low: float, open: float, volume: int, change_over_time: float, market_change_over_time: float, u_open: Optional[float], u_close: Optional[float], u_high: Optional[float], u_low: Optional[float], u_volume: Optional[int], f_open: Optional[float], f_close: Optional[float], f_high: Optional[float], f_flow: Optional[float], f_volume: Optional[int], label: str, change: Optional[float], change_percent: Optional[float]</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/stocks.html#HistoricalStockPrice"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">iex_api.model.stocks.</code><code class="sig-name descname">HistoricalStockPrice</code><span class="sig-paren">(</span><em class="sig-param">id: str, key: str, source: Optional[str], sub_key: Optional[str], date: Optional[datetime.date], updated: Optional[datetime.date], symbol: str, close: float, high: float, low: float, open: float, volume: int, change_over_time: float, market_change_over_time: float, u_open: Optional[float], u_close: Optional[float], u_high: Optional[float], u_low: Optional[float], u_volume: Optional[int], f_open: Optional[float], f_close: Optional[float], f_high: Optional[float], f_flow: Optional[float], f_volume: Optional[int], label: str, change: Optional[float], change_percent: Optional[float]</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/iex_api/model/stocks.html#HistoricalStockPrice"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#iex_api.model.common.IEXTimeSeriesObject" title="iex_api.model.common.IEXTimeSeriesObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">iex_api.model.common.IEXTimeSeriesObject</span></code></a>, <a class="reference internal" href="#iex_api.model.common.SymbolMixin" title="iex_api.model.common.SymbolMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">iex_api.model.common.SymbolMixin</span></code></a></p>
 <dl class="attribute">
 <dt id="iex_api.model.stocks.HistoricalStockPrice.change">
@@ -2118,6 +2123,11 @@
 <dl class="method">
 <dt id="iex_api.model.stocks.HistoricalStockPrice.schema">
 <em class="property">classmethod </em><code class="sig-name descname">schema</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.schema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="iex_api.model.stocks.HistoricalStockPrice.symbol">
+<code class="sig-name descname">symbol</code><em class="property">: str</em><em class="property"> = None</em><a class="headerlink" href="#iex_api.model.stocks.HistoricalStockPrice.symbol" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
