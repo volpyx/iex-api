@@ -1,5 +1,7 @@
+import asyncio
 from dataclasses import dataclass
 import datetime
+from itertools import chain
 from typing import Optional, List
 
 from dataclasses_json import dataclass_json, LetterCase
@@ -62,11 +64,34 @@ class IEXTimeSeriesObject(IEXBaseMixin):
 
 @dataclass(frozen=True)
 class SymbolMixin(IEXBaseMixin):
-    symbol: str
+    @classmethod
+    async def from_symbol(cls, symbol: str):
+        return await cls.api().perform_request(f"/stock/{symbol}/{cls.PATH}", cls)
 
     @classmethod
-    def from_symbol(cls, symbol: str):
-        raise NotImplementedError
+    async def from_symbols(cls, symbols: List[str]):
+        all_data = await asyncio.gather(
+            *chain(
+                asyncio.ensure_future(
+                    cls.api().perform_request(
+                        "/stock/market/batch",
+                        dict,
+                        {
+                            "symbols": ",".join(symbols[start : start + 100]),
+                            "types": cls.PATH,
+                        },
+                    )
+                )
+                for start in range(0, len(symbols), 100)
+            )
+        )
+
+        def extract_parts(data: dict):
+            return (
+                cls.from_dict(part[cls.PATH.lower()]) for part in list(data.values())
+            )
+
+        return (item for sublist in map(extract_parts, all_data) for item in sublist)
 
 
 @dataclass_json(letter_case=LetterCase.CAMEL)

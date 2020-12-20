@@ -27,6 +27,7 @@ class IntraDayStockPrice:
 @dataclass_json(letter_case=LetterCase.CAMEL)
 @dataclass(frozen=True)
 class HistoricalStockPrice(IEXTimeSeriesObject, SymbolMixin):
+    symbol: str
     close: float
     high: float
     low: float

@@ -4,7 +4,7 @@ from typing import List, Optional
 
 from dataclasses_json import dataclass_json, LetterCase
 
-from iex_api.model.common import SymbolMixin, IEXTimeSeriesObject, IEXBaseMixin
+from iex_api.model.common import SymbolMixin, IEXTimeSeriesObject
 
 
 @dataclass_json(letter_case=LetterCase.CAMEL)
@@ -130,6 +130,7 @@ class Income(IEXTimeSeriesObject):
 @dataclass_json(letter_case=LetterCase.CAMEL)
 @dataclass(frozen=True)
 class Company(SymbolMixin):
+    symbol: str
     company_name: str
     exchange: str
     industry: str
@@ -150,14 +151,12 @@ class Company(SymbolMixin):
     country: str
     phone: str
 
-    @classmethod
-    async def from_symbol(cls, symbol: str):
-        return await cls.api().perform_request(f"/stock/{symbol}/company", Company)
+    PATH = "company"
 
 
 @dataclass_json(letter_case=LetterCase.CAMEL)
 @dataclass(frozen=True)
-class KeyStats(IEXBaseMixin):
+class KeyStats(SymbolMixin):
     company_name: str
     marketcap: int
     week52high: float
@@ -188,9 +187,7 @@ class KeyStats(IEXBaseMixin):
     day30Change_percent: float
     day5Change_percent: float
 
-    @classmethod
-    async def from_symbol(cls, symbol: str):
-        return await cls.api().perform_request(f"/stock/{symbol}/stats", KeyStats)
+    PATH = "stats"
 
 
 @dataclass_json(letter_case=LetterCase.CAMEL)
@@ -218,8 +215,4 @@ class AdvancedStats(KeyStats):
     week52low_date: datetime.date
     put_call_ratio: float
 
-    @classmethod
-    async def from_symbol(cls, symbol: str):
-        return await cls.api().perform_request(
-            f"/stock/{symbol}/advanced-stats", KeyStats
-        )
+    PATH = "advanced-stats"
