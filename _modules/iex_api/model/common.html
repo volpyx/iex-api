@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>iex_api.model.common &mdash; iex-api 0.0.8 documentation</title>
+  <title>iex_api.model.common &mdash; iex-api 0.0.9 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.0.8
+                0.0.9
               </div>
             
           
@@ -242,7 +242,7 @@
 <div class="viewcode-block" id="SymbolMixin"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.common.SymbolMixin">[docs]</a><span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="k">class</span> <span class="nc">SymbolMixin</span><span class="p">(</span><span class="n">IEXBaseMixin</span><span class="p">):</span>
 <div class="viewcode-block" id="SymbolMixin.from_symbol"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.common.SymbolMixin.from_symbol">[docs]</a>    <span class="nd">@classmethod</span>
-    <span class="k">async</span> <span class="k">def</span> <span class="nf">from_symbol</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">symbol</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">from_symbol</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">symbol</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">return</span> <span class="k">await</span> <span class="bp">cls</span><span class="o">.</span><span class="n">api</span><span class="p">()</span><span class="o">.</span><span class="n">perform_request</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;/stock/</span><span class="si">{</span><span class="n">symbol</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="bp">cls</span><span class="o">.</span><span class="n">PATH</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="SymbolMixin.from_symbols"><a class="viewcode-back" href="../../../iex_api.model.html#iex_api.model.common.SymbolMixin.from_symbols">[docs]</a>    <span class="nd">@classmethod</span>
