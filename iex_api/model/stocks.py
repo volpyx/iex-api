@@ -4,6 +4,7 @@ from typing import Optional
 
 from dataclasses_json import LetterCase, dataclass_json
 
+from iex_api.api.model.model import IEXRange
 from iex_api.model.common import IEXTimeSeriesObject, SymbolMixin
 
 
@@ -50,5 +51,10 @@ class HistoricalStockPrice(IEXTimeSeriesObject, SymbolMixin):
     change_percent: Optional[float]
 
     @classmethod
-    async def from_symbol(cls, symbol: str) -> "HistoricalStockPrice":
-        return await cls.api().chart()
+    async def from_symbol(
+        cls,
+        symbol: str,
+        range: IEXRange,
+        **kwargs
+    ) -> "HistoricalStockPrice":
+        return await cls.api().chart(symbol, range, cls, **kwargs)

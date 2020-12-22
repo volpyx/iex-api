@@ -65,7 +65,7 @@ class IEXTimeSeriesObject(IEXBaseMixin):
 @dataclass(frozen=True)
 class SymbolMixin(IEXBaseMixin):
     @classmethod
-    async def from_symbol(cls, symbol: str):
+    async def from_symbol(cls, symbol: str, *args, **kwargs):
         return await cls.api().perform_request(f"/stock/{symbol}/{cls.PATH}", cls)
 
     @classmethod

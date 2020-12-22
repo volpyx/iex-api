@@ -216,3 +216,11 @@ class AdvancedStats(KeyStats):
     put_call_ratio: float
 
     PATH = "advanced-stats"
+
+
+@dataclass_json(letter_case=LetterCase.CAMEL)
+@dataclass(frozen=True)
+class Logo(SymbolMixin):
+    url: str
+
+    PATH = "logo"
