@@ -52,9 +52,6 @@ class HistoricalStockPrice(IEXTimeSeriesObject, SymbolMixin):
 
     @classmethod
     async def from_symbol(
-        cls,
-        symbol: str,
-        range: IEXRange,
-        **kwargs
+        cls, symbol: str, range: IEXRange, **kwargs
     ) -> "HistoricalStockPrice":
         return await cls.api().chart(symbol, range, cls, **kwargs)
